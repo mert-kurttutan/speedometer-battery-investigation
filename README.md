@@ -28,7 +28,58 @@ nix develop -c nu scripts/capture-linux.nu battery
 
 The Linux script samples for 240 seconds by default. Start Speedometer as soon as it says to. Set a different duration as the third argument. Logs default to `/tmp/speedometer-power-captures/`; copy captures you want to preserve into `captures/raw/` before committing.
 
-On Windows, install Nushell, clone this repo, open Nushell in the repo, and run `nu scripts/capture-windows.nu battery` or `nu scripts/capture-windows.nu ac`. Add a duration in seconds to change the default: `nu scripts/capture-windows.nu battery 300`. The Windows script verifies power source from WMI, records powercfg AC/DC policy, battery state, DTT/IPF service state, CPU frequency/performance-limit counters, and available 3D GPU engine counters while Speedometer runs. It does not change power settings.
+### Windows setup and capture
+
+1. Open PowerShell. If Git is not installed, install Git for Windows:
+
+   ```powershell
+   winget install --id Git.Git --exact
+   ```
+
+2. Install Nushell using its official Windows package:
+
+   ```powershell
+   winget install --id Nushell.Nushell --exact
+   ```
+
+   Close and reopen the terminal after installation, then run `nu` to start Nushell.
+
+3. In Nushell, clone this repository and enter it:
+
+   ```nu
+   git clone https://github.com/mert-kurttutan/speedometer-battery-investigation.git
+   cd speedometer-battery-investigation
+   ```
+
+4. Close unnecessary applications and use the same browser build, Speedometer 3.1 page, browser profile, display resolution, refresh rate, and brightness for both runs. Keep the benchmark tab focused. Do not change the Windows power mode between the AC and battery captures; the script records the active plan and its AC/DC CPU policy.
+
+5. Unplug the charger and run the battery capture:
+
+   ```nu
+   nu scripts/capture-windows.nu battery 300
+   ```
+
+   Start Speedometer as soon as the script says it is recording. It samples for 300 seconds, then asks for the score.
+
+6. Connect the charger, confirm Windows is on AC, and repeat:
+
+   ```nu
+   nu scripts/capture-windows.nu ac 300
+   ```
+
+The script verifies the power source through WMI and records the active power plan, AC/DC processor policy, battery state, Intel DTT/IPF service state, CPU frequency/performance-limit counters, and available 3D GPU engine counters. It does not change power settings. Logs are written to `%TEMP%\speedometer-power-captures\`.
+
+To add the two Windows logs to this repository, copy the generated files into `captures/raw/`, then review and commit them:
+
+```nu
+cp $'($env.TEMP)\speedometer-power-captures\<battery-log-name>.log' captures/raw/
+cp $'($env.TEMP)\speedometer-power-captures\<ac-log-name>.log' captures/raw/
+git add captures/raw
+git commit -m 'Add Windows AC and battery captures'
+git push
+```
+
+Replace the placeholder names with the actual timestamped filenames. Git authentication is required to push; Git for Windows includes Git Credential Manager, so the GitHub CLI is not needed.
 
 To troubleshoot missing MSR devices on NixOS, check `ls -l /dev/cpu/0/msr` and `lsmod | rg '^msr'`; if the kernel supports the module, a temporary `sudo modprobe msr` may create the device. Do not enable persistent module settings or write any MSR as part of diagnosis.
 

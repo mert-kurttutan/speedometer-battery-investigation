@@ -26,7 +26,7 @@ nix develop -c nu scripts/capture-linux.nu ac
 nix develop -c nu scripts/capture-linux.nu battery
 ```
 
-The Linux script samples for 240 seconds by default. Start Speedometer as soon as it says to. Set a different duration as the third argument. Logs default to `/tmp/speedometer-power-captures/` and are intentionally excluded from Git.
+The Linux script samples for 240 seconds by default. Start Speedometer as soon as it says to. Set a different duration as the third argument. Logs default to `/tmp/speedometer-power-captures/`; copy captures you want to preserve into `captures/raw/` before committing.
 
 On Windows, install Nushell, clone this repo, open Nushell in the repo, and run `nu scripts/capture-windows.nu battery` or `nu scripts/capture-windows.nu ac`. Add a duration in seconds to change the default: `nu scripts/capture-windows.nu battery 300`. The Windows script verifies power source from WMI, records powercfg AC/DC policy, battery state, DTT/IPF service state, CPU frequency/performance-limit counters, and available 3D GPU engine counters while Speedometer runs. It does not change power settings.
 
@@ -34,5 +34,5 @@ To troubleshoot missing MSR devices on NixOS, check `ls -l /dev/cpu/0/msr` and `
 
 ## Cross-machine use
 
-Once this directory is pushed to a private GitHub repository, clone it on another computer with `git` and authenticate that computer to GitHub. Codex CLI can then be started from the cloned directory; it does not require `gh` if Git authentication is already configured.
+This directory is pushed to a private GitHub repository. Clone it on another computer with `git` and authenticate that computer to GitHub. Codex CLI can then be started from the cloned directory; it does not require `gh` if Git authentication is already configured.
 

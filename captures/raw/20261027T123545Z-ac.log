@@ -1,0 +1,1558 @@
+
+===== before snapshot: 2026-10-27T15:35:45+03:00
+Reported power source: ac
+Expected capture: ac
+Kernel: 6.18.57
+Power profile: performance
+Active power services:
+active
+inactive
+inactive
+inactive
+
+--- Battery status ---
+/sys/class/power_supply/BAT0/status: Charging
+/sys/class/power_supply/BAT0/capacity: 96
+/sys/class/power_supply/BAT0/voltage_now: 17431000
+/sys/class/power_supply/BAT0/current_now: 512000
+
+--- Intel P-state and CPU frequency policies ---
+/sys/devices/system/cpu/intel_pstate/status: active
+/sys/devices/system/cpu/intel_pstate/no_turbo: 0
+/sys/devices/system/cpu/intel_pstate/min_perf_pct: 16
+/sys/devices/system/cpu/intel_pstate/max_perf_pct: 100
+/sys/devices/system/cpu/cpufreq/policy0/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy10/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy11/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy12/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy13/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy14/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy15/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy16/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy17/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy18/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy19/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy1/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy20/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy21/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy22/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy23/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy24/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy25/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy26/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy27/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy28/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy29/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy2/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy30/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy31/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy3/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy4/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy5/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy6/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy7/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy8/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy9/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy0/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy10/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy11/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy12/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy13/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy14/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy15/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy16/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy17/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy18/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy19/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy1/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy20/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy21/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy22/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy23/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy24/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy25/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy26/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy27/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy28/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy29/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy2/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy30/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy31/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy3/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy4/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy5/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy6/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy7/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy8/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy9/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy10/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy11/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy12/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy13/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy14/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy15/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy16/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy17/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy18/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy19/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy1/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy20/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy21/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy22/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy23/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy24/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy25/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy26/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy27/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy28/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy29/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy2/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy30/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy31/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy3/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy5/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy7/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy8/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy9/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq: 5200000
+/sys/devices/system/cpu/cpufreq/policy10/scaling_max_freq: 5400000
+/sys/devices/system/cpu/cpufreq/policy11/scaling_max_freq: 5400000
+/sys/devices/system/cpu/cpufreq/policy12/scaling_max_freq: 5200000
+/sys/devices/system/cpu/cpufreq/policy13/scaling_max_freq: 5200000
+/sys/devices/system/cpu/cpufreq/policy14/scaling_max_freq: 5200000
+/sys/devices/system/cpu/cpufreq/policy15/scaling_max_freq: 5200000
+/sys/devices/system/cpu/cpufreq/policy16/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy17/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy18/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy19/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy1/scaling_max_freq: 5200000
+/sys/devices/system/cpu/cpufreq/policy20/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy21/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy22/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy23/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy24/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy25/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy26/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy27/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy28/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy29/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy2/scaling_max_freq: 5200000
+/sys/devices/system/cpu/cpufreq/policy30/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy31/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy3/scaling_max_freq: 5200000
+/sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq: 5200000
+/sys/devices/system/cpu/cpufreq/policy5/scaling_max_freq: 5200000
+/sys/devices/system/cpu/cpufreq/policy6/scaling_max_freq: 5200000
+/sys/devices/system/cpu/cpufreq/policy7/scaling_max_freq: 5200000
+/sys/devices/system/cpu/cpufreq/policy8/scaling_max_freq: 5400000
+/sys/devices/system/cpu/cpufreq/policy9/scaling_max_freq: 5400000
+/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq: 5061681
+/sys/devices/system/cpu/cpufreq/policy10/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy11/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy12/scaling_cur_freq: 1741085
+/sys/devices/system/cpu/cpufreq/policy13/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy14/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy15/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy16/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy17/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy18/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy19/scaling_cur_freq: 3868159
+/sys/devices/system/cpu/cpufreq/policy1/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy20/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy21/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy22/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy23/scaling_cur_freq: 807170
+/sys/devices/system/cpu/cpufreq/policy24/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy25/scaling_cur_freq: 802976
+/sys/devices/system/cpu/cpufreq/policy26/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy27/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy28/scaling_cur_freq: 1584740
+/sys/devices/system/cpu/cpufreq/policy29/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy2/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy30/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy31/scaling_cur_freq: 798518
+/sys/devices/system/cpu/cpufreq/policy3/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy4/scaling_cur_freq: 1814203
+/sys/devices/system/cpu/cpufreq/policy5/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy6/scaling_cur_freq: 1818136
+/sys/devices/system/cpu/cpufreq/policy7/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy8/scaling_cur_freq: 1335562
+/sys/devices/system/cpu/cpufreq/policy9/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy0/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy10/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy11/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy12/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy13/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy14/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy15/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy16/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy17/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy18/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy19/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy1/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy20/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy21/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy22/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy23/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy24/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy25/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy26/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy27/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy28/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy29/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy2/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy30/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy31/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy3/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy4/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy5/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy6/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy7/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy8/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy9/energy_performance_preference: performance
+
+--- ACPI platform profile ---
+/sys/firmware/acpi/platform_profile: performance
+/sys/firmware/acpi/platform_profile_choices: low-power balanced performance
+
+--- Intel RAPL limits and energy counters ---
+/sys/class/powercap/intel-rapl:0:0/name: core
+/sys/class/powercap/intel-rapl:0:1/name: uncore
+/sys/class/powercap/intel-rapl:0/name: package-0
+/sys/class/powercap/intel-rapl-mmio:0/name: package-0
+/sys/class/powercap/intel-rapl:0:0/max_energy_range_uj: 262143328850
+/sys/class/powercap/intel-rapl:0:1/max_energy_range_uj: 262143328850
+/sys/class/powercap/intel-rapl:0/max_energy_range_uj: 262143328850
+/sys/class/powercap/intel-rapl-mmio:0/max_energy_range_uj: 262143328850
+/sys/class/powercap/intel-rapl:0:0/constraint_0_name: long_term
+/sys/class/powercap/intel-rapl:0:1/constraint_0_name: long_term
+/sys/class/powercap/intel-rapl:0/constraint_0_name: long_term
+/sys/class/powercap/intel-rapl:0/constraint_1_name: short_term
+/sys/class/powercap/intel-rapl:0/constraint_2_name: peak_power
+/sys/class/powercap/intel-rapl-mmio:0/constraint_0_name: long_term
+/sys/class/powercap/intel-rapl-mmio:0/constraint_1_name: short_term
+/sys/class/powercap/intel-rapl-mmio:0/constraint_2_name: peak_power
+/sys/class/powercap/intel-rapl:0:0/constraint_0_power_limit_uw: 0
+/sys/class/powercap/intel-rapl:0:1/constraint_0_power_limit_uw: 0
+/sys/class/powercap/intel-rapl:0/constraint_0_power_limit_uw: 110000000
+/sys/class/powercap/intel-rapl:0/constraint_1_power_limit_uw: 130000000
+/sys/class/powercap/intel-rapl:0/constraint_2_power_limit_uw: 246000000
+/sys/class/powercap/intel-rapl-mmio:0/constraint_0_power_limit_uw: 110000000
+/sys/class/powercap/intel-rapl-mmio:0/constraint_1_power_limit_uw: 130000000
+/sys/class/powercap/intel-rapl-mmio:0/constraint_2_power_limit_uw: 246000000
+/sys/class/powercap/intel-rapl:0:0/constraint_0_time_window_us: 976
+/sys/class/powercap/intel-rapl:0:1/constraint_0_time_window_us: 976
+/sys/class/powercap/intel-rapl:0/constraint_0_time_window_us: 55967744
+/sys/class/powercap/intel-rapl:0/constraint_1_time_window_us: 2440
+/sys/class/powercap/intel-rapl:0/constraint_2_time_window_us: 
+/sys/class/powercap/intel-rapl-mmio:0/constraint_0_time_window_us: 55967744
+/sys/class/powercap/intel-rapl-mmio:0/constraint_1_time_window_us: 2440
+/sys/class/powercap/intel-rapl-mmio:0/constraint_2_time_window_us: 
+
+--- Intel DPTF processor power-limit interfaces ---
+/sys/bus/pci/devices/0000:00:04.0/power_limits/power_limit_0_max_uw: 45000000
+/sys/bus/pci/devices/0000:00:04.0/power_limits/power_limit_0_min_uw: 35000000
+/sys/bus/pci/devices/0000:00:04.0/power_limits/power_limit_0_step_uw: 1000000
+/sys/bus/pci/devices/0000:00:04.0/power_limits/power_limit_0_tmax_us: 32000000
+/sys/bus/pci/devices/0000:00:04.0/power_limits/power_limit_0_tmin_us: 28000000
+/sys/bus/pci/devices/0000:00:04.0/power_limits/power_limit_1_max_uw: 56250000
+/sys/bus/pci/devices/0000:00:04.0/power_limits/power_limit_1_min_uw: 56250000
+/sys/bus/pci/devices/0000:00:04.0/power_limits/power_limit_1_step_uw: 1000000
+/sys/bus/pci/devices/0000:00:04.0/power_limits/power_limit_1_tmax_us: 0
+/sys/bus/pci/devices/0000:00:04.0/power_limits/power_limit_1_tmin_us: 0
+
+--- Read-only CPU MSR limits (rdmsr output is CPU order) ---
+IA32_HWP_REQUEST 0x774 (all CPUs):
+MSR_CORE_PERF_LIMIT_REASONS 0x64f (all CPUs):
+MSR_PKG_POWER_LIMIT 0x610 (CPU 0):
+rdmsr: open: No such file or directory
+
+===== turbostat (1-second intervals) =====
+turbostat version 2025.09.09 - Len Brown <lenb@kernel.org>
+Kernel command line: initrd=\EFI\nixos\2cjpc79zkmcdyg0wlaqxqshqr9xkla8r-initrd-linux-6.18.57-initrd.efi init=/nix/store/ph505n559py1s1f9n6bdn4l25dqv9kxq-nixos-system-excalibur-26.05.20261026.718f670/init i915.force_probe=a788 intel_idle.max_cstate=1 acpi_backlight=native nvidia-drm.fbdev=1 root=fstab loglevel=4 lsm=landlock,yama,bpf
+CPUID(0): GenuineIntel 0x20 CPUID levels
+CPUID(1): family:model:stepping 0x6:b7:1 (6:183:1)
+CPUID(0x80000000): max_extended_levels: 0x80000008
+CPUID(1): SSE3 MONITOR - EIST TM2 TSC MSR ACPI-TM HT TM
+CPUID(6): APERF, TURBO, DTS, PTM, HWP, HWPnotify, HWPwindow, HWPepp, HWPpkg, EPB
+CPUID(7): No-SGX Hybrid
+CPUID(0x15): eax_crystal: 2 ebx_tsc: 126 ecx_crystal_hz: 38400000
+TSC: 2419 MHz (38400000 Hz * 126 / 2 / 1000000)
+CPUID(0x16): base_mhz: 2400 max_mhz: 3900 bus_mhz: 100
+cpu0: cpufreq driver: intel_pstate
+cpu0: cpufreq governor: powersave
+cpufreq intel_pstate no_turbo: 0
+cpu0: EPB: 0 (performance)
+/dev/cpu_dma_latency: 2000000000 usec (default)
+current_driver: intel_idle
+current_governor: menu
+current_governor_ro: menu
+cpu0: POLL: CPUIDLE CORE POLL IDLE
+cpu0: C1ACPI: ACPI FFH MWAIT 0x0
+Uncore Frequency package0 die0: 800 - 4800 MHz (800 - 4800 MHz) 3700 MHz
+intel-rapl:0: package-0 56.0s:110W,max:55W 2.4ms:130W
+intel-rapl:0/intel-rapl:0:0: core disabled
+intel-rapl:0/intel-rapl:0:1: uncore disabled
+intel-rapl-mmio:0: package-0 56.0s:110W,max:55W 2.4ms:130W
+cpu0: Guessing tjMax 100 C, Please use -T to specify
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	8	0.32	2428	2420	0.92	1500	0	0	0.00	99.72	100.25	0.00	0.00	0	97.14	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	14.63	10.20	0.02	4000
+0	0	5	0.42	1246	2419	0.69	95	0	0	0.00	99.69	100.35	0.00	0.00	0	97.11	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	14.62	10.20	0.02	4000
+0	1	1	0.02	2904	2419	0.63	4	0	0	0.00	99.98	100.35
+4	2	7	0.43	1647	2419	0.60	63	0	0	0.00	99.66	100.35	0.00	0.00	0
+4	3	0	0.01	2233	2419	0.54	3	0	0	0.00	99.99	100.36
+8	4	49	1.29	3827	2419	0.95	75	0	0	0.00	98.78	99.49	0.00	0.00	0
+8	5	0	0.01	2742	2419	0.37	2	0	0	0.00	99.99	99.48
+12	6	7	0.30	2469	2419	1.16	47	0	0	0.00	99.74	100.47	0.00	0.00	0
+12	7	1	0.03	3393	2419	0.14	3	0	0	0.00	99.97	100.48
+16	8	28	1.86	1505	2419	1.41	487	0	0	0.02	98.32	98.88	0.00	0.00	0
+16	9	0	0.01	1824	2419	0.47	3	0	0	0.00	99.99	98.89
+20	10	32	0.87	3662	2419	0.89	61	0	0	0.00	99.17	99.91	0.00	0.00	0
+20	11	0	0.01	1734	2419	0.50	3	0	0	0.00	99.99	99.91
+24	12	21	0.85	2496	2419	1.39	146	0	0	0.00	99.25	99.93	0.00	0.00	0
+24	13	0	0.01	1759	2419	0.46	3	0	0	0.00	99.99	99.92
+28	14	24	0.77	3054	2419	0.77	23	0	0	0.00	99.27	100.01	0.00	0.00	0
+28	15	0	0.01	1880	2419	0.51	3	0	0	0.00	99.99	100.01
+32	16	12	0.55	2220	2419	0.43	36	0	0	0.00	99.46	100.23	0.00	0.00	0
+33	17	21	0.69	3069	2419	0.60	52	0	0	0.00	99.32	100.10	0.00	0.00	0
+34	18	6	0.24	2309	2419	0.88	44	0	0	0.00	99.76	100.55	0.00	0.00	0
+35	19	5	0.20	2478	2419	0.82	26	0	0	0.00	99.80	100.59	0.00	0.00	0
+36	20	2	0.09	2549	2419	1.10	6	0	0	0.00	99.91	100.71	0.00	0.00	0
+37	21	10	0.36	2678	2419	0.56	46	0	0	0.00	99.65	100.43	0.00	0.00	0
+38	22	1	0.07	1473	2419	0.35	11	0	0	0.00	99.93	100.72	0.00	0.00	0
+39	23	7	0.62	1057	2419	0.84	102	0	0	0.00	99.39	100.15	0.00	0.00	0
+40	24	0	0.02	1220	2419	0.46	4	0	0	0.00	99.98	100.78	0.00	0.00	0
+41	25	2	0.21	897	2419	0.81	76	0	0	0.00	99.81	100.58	0.00	0.00	0
+42	26	0	0.02	1783	2419	0.47	4	0	0	0.00	99.99	100.78	0.00	0.00	0
+43	27	0	0.01	2072	2419	0.46	3	0	0	0.00	99.99	100.79	0.00	0.00	0
+44	28	0	0.02	1230	2419	0.51	4	0	0	0.00	99.98	100.78	0.00	0.00	0
+45	29	0	0.01	2167	2419	0.42	4	0	0	0.00	99.99	100.79	0.00	0.00	0
+46	30	1	0.02	2354	2419	0.45	12	0	0	0.00	99.98	100.77	0.00	0.00	0
+47	31	4	0.17	2537	2419	1.11	49	0	0	0.00	99.84	100.62	0.00	0.00	0
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	15	0.59	2613	2419	0.70	3995	0	0	0.00	99.47	99.65	0.00	0.00	0	95.95	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	26.70	21.81	0.02	4000
+0	0	15	1.07	1368	2419	0.70	226	0	0	0.00	99.24	99.64	0.00	0.00	0	95.95	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	26.70	21.81	0.02	4000
+0	1	2	0.06	3341	2419	1.41	3	0	0	0.00	99.94	99.64
+4	2	25	1.23	2004	2419	0.93	235	0	0	0.00	98.99	99.52	0.00	0.00	0
+4	3	1	0.02	4850	2419	0.33	1	0	0	0.00	99.98	99.52
+8	4	39	1.30	3039	2419	0.71	122	0	0	0.00	99.11	96.78	0.00	0.00	0
+8	5	126	2.63	4784	2419	0.07	2089	0	0	0.00	97.42	96.78
+12	6	38	1.67	2284	2419	0.65	158	0	0	0.00	98.70	98.39	0.00	0.00	0
+12	7	8	0.71	1153	2419	0.45	115	0	0	0.00	99.31	98.38
+16	8	58	2.76	2120	2419	1.04	445	0	0	0.01	97.48	97.97	0.00	0.00	0
+16	9	0	0.01	5001	2419	0.51	0	0	0	0.00	99.99	97.97
+20	10	35	1.70	2085	2419	0.98	199	0	0	0.00	98.53	99.04	0.00	0.00	0
+20	11	0	0.01	1975	2419	0.43	2	0	0	0.00	99.99	99.05
+24	12	49	1.80	2697	2419	1.01	157	0	0	0.04	98.34	98.96	0.00	0.00	0
+24	13	0	0.01	2457	2419	0.44	2	0	0	0.00	99.99	98.96
+28	14	64	2.19	2917	2419	1.19	66	0	0	0.00	97.93	98.56	0.00	0.00	0
+28	15	0	0.01	2347	2419	0.37	4	0	0	0.00	99.99	98.57
+32	16	8	0.39	2078	2419	0.66	22	0	0	0.00	99.61	100.40	0.00	0.00	0
+33	17	1	0.03	3522	2419	0.32	0	0	0	0.00	99.97	100.76	0.00	0.00	0
+34	18	1	0.06	1819	2419	0.48	9	0	0	0.00	99.95	100.74	0.00	0.00	0
+35	19	2	0.08	2328	2419	0.76	5	0	0	0.00	99.93	100.72	0.00	0.00	0
+36	20	2	0.07	2580	2419	0.68	8	0	0	0.00	99.93	100.73	0.00	0.00	0
+37	21	5	0.19	2658	2419	0.66	4	0	0	0.00	99.81	100.61	0.00	0.00	0
+38	22	1	0.04	2249	2419	1.37	1	0	0	0.00	99.96	100.75	0.00	0.00	0
+39	23	7	0.66	1092	2419	0.83	109	0	0	0.00	99.36	100.12	0.00	0.00	0
+40	24	1	0.04	1802	2419	0.38	2	0	0	0.00	99.96	100.76	0.00	0.00	0
+41	25	0	0.01	1728	2419	0.53	0	0	0	0.00	99.99	100.79	0.00	0.00	0
+42	26	0	0.01	1806	2419	0.64	2	0	0	0.00	99.99	100.79	0.00	0.00	0
+43	27	0	0.01	1734	2419	0.65	2	0	0	0.00	99.99	100.79	0.00	0.00	0
+44	28	0	0.02	1036	2419	0.67	2	0	0	0.00	99.98	100.78	0.00	0.00	0
+45	29	1	0.02	3560	2419	0.66	1	0	0	0.00	99.98	100.78	0.00	0.00	0
+46	30	0	0.00	3897	2419	0.55	1	0	0	0.00	100.00	100.80	0.00	0.00	0
+47	31	4	0.12	3202	2419	1.22	3	0	0	0.00	99.88	100.68	0.00	0.00	0
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	10	0.38	2651	2419	0.86	1626	0	0	0.00	99.65	100.10	0.00	0.00	0	97.32	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	17.76	13.30	0.02	4000
+0	0	34	1.10	3097	2419	0.17	201	0	0	0.00	99.11	99.63	0.00	0.00	0	97.33	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	17.76	13.30	0.02	4000
+0	1	1	0.05	1662	2419	0.85	6	0	0	0.00	99.96	99.63
+4	2	15	0.89	1734	2419	0.80	189	0	0	0.00	99.31	99.86	0.00	0.00	0
+4	3	1	0.03	2418	2419	0.54	6	0	0	0.00	99.97	99.86
+8	4	6	0.39	1617	2419	0.58	51	0	0	0.00	99.71	100.38	0.00	0.00	0
+8	5	0	0.02	1904	2419	0.64	5	0	0	0.00	99.98	100.38
+12	6	17	0.63	2732	2419	0.47	39	0	0	0.00	99.45	100.12	0.00	0.00	0
+12	7	1	0.04	3924	2419	0.08	5	0	0	0.00	99.96	100.13
+16	8	37	1.39	2668	2419	0.89	120	0	0	0.00	98.71	99.37	0.00	0.00	0
+16	9	0	0.01	2213	2419	0.49	3	0	0	0.00	99.99	99.37
+20	10	109	3.25	3353	2419	1.24	333	0	0	0.01	96.93	97.49	0.00	0.00	0
+20	11	0	0.01	2334	2419	0.45	3	0	0	0.00	99.99	97.49
+24	12	31	1.54	2024	2419	0.98	293	0	0	0.00	98.64	99.20	0.00	0.00	0
+24	13	0	0.02	1556	2419	0.44	5	0	0	0.00	99.98	99.20
+28	14	10	0.39	2616	2419	0.64	15	0	0	0.00	99.65	100.40	0.00	0.00	0
+28	15	0	0.01	2255	2419	0.54	3	0	0	0.00	99.99	100.40
+32	16	15	0.44	3388	2419	0.49	22	0	0	0.00	99.56	100.35	0.00	0.00	0
+33	17	3	0.11	2954	2419	0.57	12	0	0	0.00	99.89	100.69	0.00	0.00	0
+34	18	11	0.45	2540	2419	0.61	108	0	0	0.00	99.56	100.33	0.00	0.00	0
+35	19	7	0.25	2851	2419	1.01	12	0	0	0.00	99.76	100.55	0.00	0.00	0
+36	20	1	0.06	2604	2419	1.44	4	0	0	0.00	99.94	100.74	0.00	0.00	0
+37	21	0	0.03	1361	2419	0.50	2	0	0	0.00	99.97	100.77	0.00	0.00	0
+38	22	1	0.11	1261	2419	1.15	13	0	0	0.00	99.89	100.69	0.00	0.00	0
+39	23	4	0.48	882	2419	1.14	99	0	0	0.00	99.53	100.30	0.00	0.00	0
+40	24	0	0.02	1015	2419	0.57	6	0	0	0.00	99.98	100.78	0.00	0.00	0
+41	25	0	0.02	1255	2419	0.61	5	0	0	0.00	99.98	100.78	0.00	0.00	0
+42	26	0	0.01	2366	2419	0.72	3	0	0	0.00	99.99	100.79	0.00	0.00	0
+43	27	0	0.01	1659	2419	0.69	3	0	0	0.00	99.99	100.79	0.00	0.00	0
+44	28	1	0.04	2012	2419	0.51	4	0	0	0.00	99.96	100.76	0.00	0.00	0
+45	29	6	0.17	3529	2419	0.46	15	0	0	0.00	99.84	100.63	0.00	0.00	0
+46	30	5	0.21	2251	2419	0.26	36	0	0	0.00	99.80	100.58	0.00	0.00	0
+47	31	5	0.13	3493	2419	1.16	5	0	0	0.00	99.87	100.66	0.00	0.00	0
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	41	1.21	3413	2419	1.14	3871	0	0	0.00	98.83	98.81	0.00	0.00	0	91.14	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	24.85	19.99	0.07	4000
+0	0	33	1.47	2268	2419	0.65	409	0	0	0.00	98.81	99.19	0.00	0.00	0	91.15	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	24.86	20.00	0.07	4000
+0	1	2	0.15	1574	2419	0.80	24	0	0	0.00	99.86	99.18
+4	2	43	1.51	2831	2419	1.30	187	0	0	0.01	98.63	99.24	0.00	0.00	0
+4	3	0	0.02	1701	2419	0.49	5	0	0	0.00	99.98	99.24
+8	4	48	1.82	2642	2419	0.90	190	0	0	0.00	98.38	98.90	0.00	0.00	0
+8	5	0	0.03	1420	2419	0.58	7	0	0	0.00	99.97	98.91
+12	6	61	1.97	3101	2419	0.91	135	0	0	0.00	98.17	98.72	0.00	0.00	0
+12	7	2	0.07	3318	2419	0.20	21	0	0	0.00	99.93	98.72
+16	8	147	4.10	3574	2419	0.95	295	0	0	0.01	96.14	96.35	0.00	0.00	0
+16	9	11	0.30	3761	2419	1.41	76	0	0	0.00	99.70	96.35
+20	10	278	6.30	4419	2419	1.45	227	0	0	0.00	93.85	94.40	0.00	0.00	0
+20	11	0	0.02	1779	2419	0.38	10	0	0	0.00	99.98	94.40
+24	12	151	4.01	3769	2419	1.40	332	0	0	0.00	96.18	96.61	0.00	0.00	0
+24	13	3	0.13	2501	2419	0.85	62	0	0	0.00	99.87	96.61
+28	14	53	2.06	2577	2419	1.33	275	0	0	0.01	98.10	98.67	0.00	0.00	0
+28	15	1	0.04	2669	2419	0.44	32	0	0	0.00	99.96	98.68
+32	16	97	2.69	3624	2419	1.21	125	0	0	0.00	97.32	98.07	0.00	0.00	0
+33	17	38	1.07	3589	2419	0.65	136	0	0	0.00	98.94	99.70	0.00	0.00	0
+34	18	72	2.11	3422	2419	0.94	169	0	0	0.00	97.91	98.65	0.00	0.00	0
+35	19	36	1.16	3080	2419	0.97	159	0	0	0.00	98.85	99.61	0.00	0.00	0
+36	20	19	0.69	2812	2419	0.90	96	0	0	0.00	99.32	100.09	0.00	0.00	0
+37	21	21	0.71	3010	2419	0.90	45	0	0	0.00	99.30	100.07	0.00	0.00	0
+38	22	12	0.43	2688	2419	0.81	65	0	0	0.00	99.58	100.35	0.00	0.00	0
+39	23	28	1.13	2434	2419	0.81	165	0	0	0.00	98.89	99.64	0.00	0.00	0
+40	24	2	0.11	1560	2419	0.55	73	0	0	0.00	99.90	100.69	0.00	0.00	0
+41	25	0	0.02	1395	2419	0.59	9	0	0	0.00	99.98	100.78	0.00	0.00	0
+42	26	0	0.01	1502	2419	0.60	6	0	0	0.00	99.99	100.79	0.00	0.00	0
+43	27	2	0.09	1816	2419	0.49	59	0	0	0.00	99.92	100.71	0.00	0.00	0
+44	28	10	0.38	2524	2419	0.77	90	0	0	0.00	99.63	100.40	0.00	0.00	0
+45	29	20	0.65	3129	2419	0.88	256	0	0	0.00	99.36	100.13	0.00	0.00	0
+46	30	108	2.88	3734	2419	1.14	64	0	0	0.00	97.12	97.88	0.00	0.00	0
+47	31	19	0.54	3517	2419	0.83	67	0	0	0.00	99.47	100.24	0.00	0.00	0
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	15	0.52	2950	2419	1.72	2245	0	0	0.00	99.52	99.84	0.00	0.00	2	96.82	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	19.82	15.29	0.02	4000
+0	0	11	0.70	1554	2419	0.78	161	0	0	0.00	99.44	100.07	0.00	0.00	0	96.81	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	19.81	15.29	0.02	4000
+0	1	1	0.03	2130	2419	0.46	5	0	0	0.00	99.97	100.07
+4	2	18	1.69	1042	2419	1.66	468	0	0	0.00	98.50	99.04	0.00	0.00	0
+4	3	1	0.03	1989	2419	0.37	8	0	0	0.00	99.98	99.04
+8	4	34	1.07	3150	2419	0.63	55	0	0	0.00	99.10	98.81	0.00	0.00	0
+8	5	42	0.90	4681	2419	0.07	633	0	0	0.00	99.11	98.81
+12	6	45	1.54	2928	2419	0.97	105	0	0	0.00	98.63	98.90	0.00	0.00	0
+12	7	4	0.35	1214	2419	0.34	46	0	0	0.00	99.66	98.90
+16	8	36	1.21	3007	2419	0.86	57	0	0	0.00	98.88	99.53	0.00	0.00	0
+16	9	1	0.05	1632	2419	0.36	13	0	0	0.00	99.95	99.53
+20	10	32	1.17	2690	2419	1.19	126	0	0	0.00	98.99	99.59	0.00	0.00	0
+20	11	0	0.02	1598	2419	0.32	5	0	0	0.00	99.98	99.59
+24	12	19	0.83	2261	2419	1.06	108	0	0	0.00	99.30	99.93	0.00	0.00	0
+24	13	0	0.02	1436	2419	0.38	4	0	0	0.00	99.98	99.93
+28	14	179	4.03	4452	2419	3.32	96	0	0	0.00	96.06	96.70	0.00	0.00	2
+28	15	0	0.02	2117	2419	0.34	8	0	0	0.00	99.98	96.70
+32	16	16	0.75	2182	2419	0.63	56	0	0	0.00	99.26	100.03	0.00	0.00	0
+33	17	16	0.55	2850	2419	0.62	31	0	0	0.00	99.46	100.24	0.00	0.00	0
+34	18	17	0.49	3416	2419	0.86	31	0	0	0.00	99.52	100.30	0.00	0.00	0
+35	19	4	0.16	2787	2419	0.57	33	0	0	0.00	99.85	100.63	0.00	0.00	0
+36	20	1	0.05	1022	2419	0.53	14	0	0	0.00	99.95	100.75	0.00	0.00	0
+37	21	0	0.02	1598	2419	0.40	7	0	0	0.00	99.98	100.78	0.00	0.00	0
+38	22	4	0.13	2740	2419	1.25	13	0	0	0.00	99.87	100.66	0.00	0.00	0
+39	23	5	0.57	969	2419	0.98	104	0	0	0.00	99.45	100.21	0.00	0.00	0
+40	24	0	0.03	972	2419	0.53	7	0	0	0.00	99.97	100.77	0.00	0.00	0
+41	25	0	0.03	1248	2419	0.43	7	0	0	0.00	99.97	100.77	0.00	0.00	0
+42	26	0	0.02	1603	2419	0.38	6	0	0	0.00	99.98	100.78	0.00	0.00	0
+43	27	0	0.04	1312	2419	0.44	7	0	0	0.00	99.96	100.76	0.00	0.00	0
+44	28	1	0.04	2131	2419	0.61	8	0	0	0.00	99.96	100.76	0.00	0.00	0
+45	29	0	0.02	1731	2419	0.37	7	0	0	0.00	99.98	100.78	0.00	0.00	0
+46	30	0	0.03	1492	2419	0.34	6	0	0	0.00	99.97	100.77	0.00	0.00	0
+47	31	4	0.14	2985	2419	1.21	10	0	0	0.00	99.86	100.65	0.00	0.00	0
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	157	4.10	3830	2418	1.48	13524	0	0	0.00	95.95	93.92	0.00	0.00	17	83.04	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	48.43	42.79	0.12	3700
+0	0	84	4.05	2067	2419	0.89	1162	0	0	0.00	96.36	96.43	0.00	0.00	0	83.20	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	48.53	42.88	0.12	3700
+0	1	9	0.43	2179	2419	0.63	71	0	0	0.00	99.58	96.43
+4	2	162	5.06	3201	2419	1.42	769	0	0	0.00	95.20	95.59	0.00	0.00	0
+4	3	3	0.18	1821	2419	0.45	55	0	0	0.00	99.82	95.59
+8	4	137	4.22	3248	2419	0.95	300	0	0	0.02	96.12	94.72	0.00	0.00	0
+8	5	84	1.94	4338	2419	0.11	1488	0	0	0.00	98.10	94.73
+12	6	335	7.85	4264	2419	1.78	349	0	0	0.00	92.37	92.35	0.00	0.00	1
+12	7	11	0.70	1606	2419	0.62	124	0	0	0.00	99.32	92.35
+16	8	364	8.69	4195	2419	1.17	932	0	0	0.00	91.58	87.35	0.00	0.00	2
+16	9	249	5.82	4275	2419	1.40	868	0	0	0.01	94.20	87.35
+20	10	1498	31.74	4719	2419	2.13	1634	0	0	0.04	68.32	68.67	0.00	0.00	17
+20	11	5	0.17	3022	2419	0.31	58	0	0	0.00	99.83	68.66
+24	12	422	10.08	4184	2419	1.81	585	0	0	0.00	90.10	89.20	0.00	0.00	1
+24	13	53	1.54	3438	2419	1.42	254	0	0	0.00	98.47	89.20
+28	14	277	7.51	3681	2419	1.24	720	0	0	0.03	92.79	92.76	0.00	0.00	0
+28	15	17	0.57	3070	2419	1.24	123	0	0	0.00	99.44	92.76
+32	16	218	6.60	3298	2419	0.96	683	0	0	0.00	93.45	94.06	0.00	0.00	0
+33	17	190	5.56	3421	2419	1.02	506	0	0	0.00	94.48	95.13	0.00	0.00	0
+34	18	189	5.37	3514	2419	0.89	300	0	0	0.01	94.65	95.33	0.00	0.00	0
+35	19	102	2.92	3500	2419	0.87	367	0	0	0.00	97.12	97.81	0.00	0.00	0
+36	20	50	1.62	3104	2419	0.86	160	0	0	0.00	98.39	99.14	0.00	0.00	0
+37	21	28	0.90	3087	2419	0.90	147	0	0	0.00	99.12	99.87	0.00	0.00	0
+38	22	57	1.85	3082	2419	0.95	202	0	0	0.00	98.18	98.91	0.00	0.00	0
+39	23	40	1.62	2448	2419	0.82	236	0	0	0.00	98.41	99.13	0.00	0.00	0
+40	24	56	1.86	2987	2419	0.76	187	0	0	0.00	98.16	98.89	0.00	0.00	0
+41	25	45	1.65	2761	2419	0.88	194	0	0	0.00	98.37	99.11	0.00	0.00	0
+42	26	62	1.84	3353	2419	0.90	125	0	0	0.00	98.18	98.93	0.00	0.00	0
+43	27	59	1.96	3008	2419	1.02	191	0	0	0.00	98.06	98.79	0.00	0.00	0
+44	28	76	2.34	3236	2419	0.60	223	0	0	0.00	97.68	98.41	0.00	0.00	0
+45	29	88	2.56	3445	2419	1.23	159	0	0	0.00	97.46	98.20	0.00	0.00	0
+46	30	30	1.11	2722	2419	0.84	190	0	0	0.00	98.91	99.67	0.00	0.00	0
+47	31	26	0.93	2840	2419	0.89	162	0	0	0.00	99.08	99.84	0.00	0.00	0
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	230	5.89	3902	2417	1.61	16582	0	0	0.01	94.09	90.93	0.00	0.00	41	77.94	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	57.24	51.35	0.18	4000
+0	0	138	5.46	2529	2419	1.21	807	0	0	0.00	94.93	94.93	0.00	0.00	0	77.98	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	57.27	51.37	0.18	4000
+0	1	11	0.69	1532	2419	0.55	120	0	0	0.00	99.33	94.93
+4	2	227	6.32	3590	2419	1.31	598	0	0	0.00	93.89	94.29	0.00	0.00	0
+4	3	5	0.32	1671	2419	0.35	106	0	0	0.00	99.69	94.28
+8	4	236	6.53	3614	2419	1.41	524	0	0	0.04	93.72	93.98	0.00	0.00	0
+8	5	8	0.44	1795	2419	0.55	106	0	0	0.00	99.57	93.98
+12	6	351	9.06	3874	2419	1.34	962	0	0	0.01	91.13	91.46	0.00	0.00	0
+12	7	9	0.43	1987	2419	0.18	106	0	0	0.00	99.58	91.46
+16	8	309	7.96	3879	2419	1.15	621	0	0	0.04	92.33	83.79	0.00	0.00	1
+16	9	474	10.82	4384	2419	1.45	1260	0	0	0.05	89.20	83.68
+20	10	196	4.49	4357	2419	0.76	689	0	0	0.01	95.74	33.60	0.00	0.00	41
+20	11	3070	65.03	4721	2419	2.27	3200	0	0	0.02	34.84	33.60
+24	12	385	10.15	3793	2419	1.16	1284	0	0	0.01	90.14	90.43	0.00	0.00	0
+24	13	5	0.30	1629	2419	0.15	93	0	0	0.00	99.72	90.43
+28	14	252	6.89	3658	2419	1.25	589	0	0	0.05	93.31	92.53	0.00	0.00	0
+28	15	59	1.68	3489	2419	1.53	329	0	0	0.00	98.34	92.53
+32	16	257	7.83	3284	2419	0.89	413	0	0	0.00	92.23	92.81	0.00	0.00	0
+33	17	233	6.80	3427	2419	0.84	382	0	0	0.00	93.26	93.87	0.00	0.00	0
+34	18	196	5.82	3376	2419	1.04	509	0	0	0.00	94.23	94.86	0.00	0.00	0
+35	19	185	5.63	3283	2419	1.16	633	0	0	0.00	94.43	95.05	0.00	0.00	0
+36	20	56	1.95	2881	2419	0.96	174	0	0	0.00	98.07	98.81	0.00	0.00	0
+37	21	101	3.13	3226	2419	1.07	382	0	0	0.00	96.89	97.61	0.00	0.00	0
+38	22	39	1.83	2149	2419	0.69	569	0	0	0.02	98.26	98.88	0.00	0.00	0
+39	23	56	2.27	2481	2419	0.83	220	0	0	0.00	97.76	98.46	0.00	0.00	0
+40	24	42	1.39	3046	2419	0.99	272	0	0	0.00	98.63	99.37	0.00	0.00	0
+41	25	87	2.96	2954	2419	1.11	371	0	0	0.00	97.07	97.78	0.00	0.00	0
+42	26	125	3.84	3247	2419	1.21	485	0	0	0.01	96.18	96.89	0.00	0.00	0
+43	27	27	1.08	2480	2419	0.66	166	0	0	0.00	98.94	99.68	0.00	0.00	0
+44	28	42	1.41	3005	2419	0.85	135	0	0	0.00	98.62	99.36	0.00	0.00	0
+45	29	68	2.14	3175	2419	1.24	152	0	0	0.00	97.88	98.61	0.00	0.00	0
+46	30	61	2.26	2678	2419	0.80	172	0	0	0.00	97.77	98.48	0.00	0.00	0
+47	31	45	1.56	2864	2419	0.82	153	0	0	0.01	98.47	99.19	0.00	0.00	0
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	227	5.79	3915	2422	1.64	21087	0	0	0.01	94.40	91.05	0.00	0.00	25	74.88	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	57.64	51.74	0.20	4000
+0	0	207	7.04	2936	2419	1.08	1141	0	0	0.00	93.39	90.89	0.00	0.00	0	74.73	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	57.53	51.64	0.20	4000
+0	1	128	3.71	3449	2419	0.64	206	0	0	0.00	96.31	90.89
+4	2	304	8.22	3692	2419	1.48	1033	0	0	0.07	91.96	92.39	0.00	0.00	0
+4	3	3	0.23	1474	2419	0.22	67	0	0	0.00	99.78	92.40
+8	4	410	10.67	3844	2419	1.34	1521	0	0	0.00	89.62	89.90	0.00	0.00	0
+8	5	5	0.29	1668	2419	0.26	74	0	0	0.00	99.73	89.89
+12	6	328	8.71	3770	2419	1.57	1217	0	0	0.02	91.54	91.60	0.00	0.00	0
+12	7	18	0.62	2955	2419	1.05	74	0	0	0.00	99.39	91.60
+16	8	820	18.45	4447	2419	1.66	1897	0	0	0.05	81.77	72.86	0.00	0.00	7
+16	9	601	13.28	4525	2419	1.44	1727	0	0	0.01	86.73	72.96
+20	10	1129	24.08	4689	2419	2.30	1933	0	0	0.00	76.05	53.30	0.00	0.00	25
+20	11	1147	25.14	4562	2419	2.37	2569	0	0	0.01	74.82	53.30
+24	12	388	9.93	3909	2419	1.71	1196	0	0	0.03	90.36	89.77	0.00	0.00	1
+24	13	38	1.33	2838	2419	0.75	219	0	0	0.00	98.70	89.76
+28	14	276	7.42	3722	2419	1.35	1391	0	0	0.01	92.86	93.19	0.00	0.00	0
+28	15	3	0.23	1283	2419	0.28	67	0	0	0.00	99.78	93.20
+32	16	222	6.81	3264	2419	1.02	705	0	0	0.01	93.24	93.85	0.00	0.00	0
+33	17	230	6.89	3338	2419	0.94	438	0	0	0.01	93.16	93.78	0.00	0.00	0
+34	18	193	6.03	3192	2419	0.97	398	0	0	0.00	94.02	94.64	0.00	0.00	0
+35	19	125	3.66	3416	2419	0.82	302	0	0	0.01	96.38	97.05	0.00	0.00	0
+36	20	41	1.45	2838	2419	0.92	133	0	0	0.00	98.56	99.31	0.00	0.00	0
+37	21	74	2.23	3329	2419	1.12	245	0	0	0.00	97.79	98.53	0.00	0.00	0
+38	22	35	1.54	2263	2419	0.91	294	0	0	0.00	98.50	99.20	0.00	0.00	0
+39	23	26	1.13	2285	2419	0.77	127	0	0	0.00	98.91	99.61	0.00	0.00	0
+40	24	16	0.70	2347	2419	0.70	94	0	0	0.00	99.32	100.07	0.00	0.00	0
+41	25	107	3.21	3336	2419	0.95	123	0	0	0.00	96.80	97.54	0.00	0.00	0
+42	26	89	2.83	3164	2419	1.19	615	0	0	0.00	97.19	97.92	0.00	0.00	0
+43	27	16	0.66	2337	2419	0.61	97	0	0	0.00	99.35	100.11	0.00	0.00	0
+44	28	16	0.66	2430	2419	0.64	101	0	0	0.00	99.36	100.12	0.00	0.00	0
+45	29	194	5.55	3499	2419	1.31	563	0	0	0.00	94.46	95.17	0.00	0.00	0
+46	30	32	1.43	2204	2419	0.77	386	0	0	0.00	98.63	99.29	0.00	0.00	0
+47	31	28	1.05	2701	2419	0.76	134	0	0	0.00	98.97	99.71	0.00	0.00	0
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	232	5.95	3900	2420	1.68	19406	0	0	0.01	94.13	90.71	0.00	0.00	25	76.90	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	58.14	52.18	0.17	4000
+0	0	285	8.53	3340	2419	1.53	2025	0	0	0.01	91.89	91.17	0.00	0.00	0	76.87	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	58.11	52.16	0.17	4000
+0	1	50	1.63	3054	2419	0.63	141	0	0	0.00	98.39	91.16
+4	2	341	8.67	3931	2419	1.83	1426	0	0	0.02	91.56	91.95	0.00	0.00	0
+4	3	4	0.27	1502	2419	0.52	95	0	0	0.00	99.74	91.95
+8	4	403	10.74	3751	2419	1.42	1433	0	0	0.05	89.53	89.82	0.00	0.00	0
+8	5	8	0.38	2022	2419	0.62	99	0	0	0.00	99.63	89.82
+12	6	360	9.17	3925	2419	1.24	1757	0	0	0.10	91.00	91.45	0.00	0.00	0
+12	7	5	0.32	1466	2419	0.43	88	0	0	0.00	99.69	91.45
+16	8	1952	42.52	4592	2419	2.34	2609	0	0	0.03	57.52	57.79	0.00	0.00	25
+16	9	8	0.27	2812	2419	0.27	85	0	0	0.00	99.74	57.79
+20	10	860	19.80	4346	2419	2.35	964	0	0	0.04	80.35	80.10	0.00	0.00	7
+20	11	49	1.28	3857	2419	1.72	241	0	0	0.00	98.74	80.11
+24	12	703	16.44	4277	2419	1.41	1500	0	0	0.02	83.73	84.10	0.00	0.00	2
+24	13	5	0.32	1626	2419	0.34	88	0	0	0.00	99.69	84.10
+28	14	546	12.78	4273	2419	1.73	1220	0	0	0.06	87.37	87.82	0.00	0.00	3
+28	15	4	0.26	1645	2419	0.43	80	0	0	0.00	99.75	87.81
+32	16	286	8.46	3376	2419	0.98	620	0	0	0.00	91.61	92.17	0.00	0.00	0
+33	17	305	8.67	3523	2419	0.96	461	0	0	0.01	91.37	91.99	0.00	0.00	0
+34	18	208	6.28	3309	2419	0.96	520	0	0	0.00	93.77	94.38	0.00	0.00	0
+35	19	168	5.06	3323	2419	0.86	501	0	0	0.00	95.00	95.62	0.00	0.00	0
+36	20	51	1.73	2954	2419	0.68	193	0	0	0.00	98.30	99.01	0.00	0.00	0
+37	21	119	3.57	3331	2419	0.99	296	0	0	0.00	96.45	97.16	0.00	0.00	0
+38	22	106	3.36	3136	2419	1.07	292	0	0	0.00	96.67	97.36	0.00	0.00	0
+39	23	63	2.43	2610	2419	0.73	523	0	0	0.02	97.65	98.27	0.00	0.00	0
+40	24	48	1.54	3111	2419	0.84	130	0	0	0.00	98.48	99.23	0.00	0.00	0
+41	25	24	0.90	2670	2419	0.71	220	0	0	0.00	99.12	99.87	0.00	0.00	0
+42	26	110	3.58	3062	2419	0.91	565	0	0	0.00	96.45	97.15	0.00	0.00	0
+43	27	30	1.10	2761	2419	0.79	121	0	0	0.00	98.92	99.67	0.00	0.00	0
+44	28	25	0.97	2546	2419	0.89	167	0	0	0.00	99.06	99.80	0.00	0.00	0
+45	29	96	2.98	3212	2419	1.10	280	0	0	0.00	97.04	97.77	0.00	0.00	0
+46	30	45	1.48	3017	2419	1.03	106	0	0	0.00	98.53	99.29	0.00	0.00	0
+47	31	165	5.06	3265	2419	1.20	560	0	0	0.03	94.96	95.65	0.00	0.00	0
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	227	5.83	3890	2418	1.65	18952	0	0	0.00	94.21	91.14	0.00	0.00	20	74.28	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	58.52	52.43	0.21	3800
+0	0	205	6.94	2951	2419	1.34	1019	0	0	0.00	93.42	93.58	0.00	0.00	0	74.32	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	58.55	52.46	0.21	3800
+0	1	11	0.45	2542	2419	0.60	85	0	0	0.00	99.56	93.58
+4	2	336	8.30	4047	2419	1.34	787	0	0	0.04	91.85	92.33	0.00	0.00	0
+4	3	4	0.25	1796	2419	0.48	72	0	0	0.00	99.76	92.33
+8	4	634	14.49	4373	2419	1.94	2670	0	0	0.00	85.69	86.03	0.00	0.00	1
+8	5	10	0.37	2571	2419	0.66	90	0	0	0.00	99.64	86.03
+12	6	306	8.29	3692	2419	1.33	1378	0	0	0.00	91.95	92.29	0.00	0.00	0
+12	7	5	0.28	1679	2419	0.50	76	0	0	0.00	99.73	92.29
+16	8	490	11.50	4260	2419	1.90	1414	0	0	0.01	88.72	89.08	0.00	0.00	5
+16	9	6	0.29	2188	2419	0.46	68	0	0	0.00	99.72	89.08
+20	10	2003	43.22	4634	2419	2.45	3095	0	0	0.02	56.86	57.05	0.00	0.00	20
+20	11	7	0.22	2954	2419	0.41	79	0	0	0.00	99.78	57.05
+24	12	528	12.83	4116	2419	1.57	1252	0	0	0.01	87.45	81.60	0.00	0.00	4
+24	13	292	7.12	4096	2419	1.52	304	0	0	0.01	92.90	81.61
+28	14	304	8.28	3676	2419	1.57	665	0	0	0.00	92.00	92.34	0.00	0.00	2
+28	15	4	0.23	1913	2419	0.44	68	0	0	0.00	99.78	92.34
+32	16	343	10.23	3351	2419	0.96	745	0	0	0.00	89.85	90.36	0.00	0.00	0
+33	17	267	7.58	3521	2419	0.99	608	0	0	0.01	92.48	93.07	0.00	0.00	0
+34	18	333	9.26	3593	2419	1.05	728	0	0	0.00	90.79	91.37	0.00	0.00	0
+35	19	277	7.83	3536	2419	1.16	395	0	0	0.00	92.22	92.81	0.00	0.00	0
+36	20	204	6.12	3339	2419	0.81	681	0	0	0.00	93.91	94.57	0.00	0.00	0
+37	21	149	4.64	3215	2419	0.81	657	0	0	0.01	95.40	96.05	0.00	0.00	0
+38	22	106	3.34	3176	2419	0.89	394	0	0	0.00	96.71	97.37	0.00	0.00	0
+39	23	106	3.45	3065	2419	0.78	322	0	0	0.00	96.60	97.26	0.00	0.00	0
+40	24	71	2.19	3236	2419	1.00	134	0	0	0.00	97.82	98.57	0.00	0.00	0
+41	25	18	0.72	2523	2419	0.60	138	0	0	0.00	99.30	100.05	0.00	0.00	0
+42	26	21	0.76	2744	2419	0.98	96	0	0	0.00	99.26	100.01	0.00	0.00	0
+43	27	18	0.75	2447	2419	0.75	138	0	0	0.00	99.27	100.02	0.00	0.00	0
+44	28	41	1.33	3063	2419	0.96	131	0	0	0.00	98.69	99.43	0.00	0.00	0
+45	29	47	1.52	3064	2419	0.99	171	0	0	0.00	98.50	99.23	0.00	0.00	0
+46	30	44	1.67	2657	2419	0.91	356	0	0	0.00	98.39	99.05	0.00	0.00	0
+47	31	69	2.14	3206	2419	1.07	136	0	0	0.01	97.87	98.61	0.00	0.00	0
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	241	6.11	3945	2420	1.69	21091	0	0	0.00	94.00	90.22	0.00	0.00	26	76.30	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	60.35	54.25	0.19	4000
+0	0	432	11.54	3743	2419	1.52	1852	0	0	0.04	88.85	88.98	0.00	0.00	0	76.25	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	60.31	54.22	0.19	4000
+0	1	15	0.59	2539	2419	0.49	120	0	0	0.00	99.43	88.98
+4	2	633	14.47	4374	2419	1.49	1862	0	0	0.02	85.70	86.09	0.00	0.00	0
+4	3	5	0.31	1760	2419	0.42	97	0	0	0.00	99.71	86.09
+8	4	441	10.33	4266	2419	1.66	930	0	0	0.00	89.84	90.29	0.00	0.00	1
+8	5	7	0.38	1809	2419	0.43	99	0	0	0.00	99.63	90.29
+12	6	568	13.75	4129	2419	1.47	1576	0	0	0.02	86.46	86.81	0.00	0.00	0
+12	7	6	0.35	1792	2419	0.37	99	0	0	0.00	99.66	86.81
+16	8	981	22.32	4394	2419	2.18	2856	0	0	0.00	77.90	78.15	0.00	0.00	11
+16	9	7	0.34	2007	2419	0.32	97	0	0	0.00	99.67	78.15
+20	10	1942	42.28	4593	2419	2.28	2499	0	0	0.01	57.77	58.04	0.00	0.00	26
+20	11	8	0.27	2771	2419	0.26	108	0	0	0.00	99.73	58.04
+24	12	518	13.06	3967	2419	1.86	1423	0	0	0.01	87.32	85.75	0.00	0.00	2
+24	13	84	2.44	3429	2419	0.57	163	0	0	0.00	97.58	85.74
+28	14	445	11.13	4001	2419	1.70	1647	0	0	0.04	89.09	89.46	0.00	0.00	3
+28	15	5	0.30	1681	2419	0.38	95	0	0	0.00	99.71	89.46
+32	16	227	6.99	3253	2419	0.92	847	0	0	0.00	93.07	93.66	0.00	0.00	0
+33	17	168	5.53	3041	2419	1.04	431	0	0	0.00	94.54	95.13	0.00	0.00	0
+34	18	196	5.67	3466	2419	0.93	382	0	0	0.00	94.37	95.02	0.00	0.00	0
+35	19	149	4.46	3351	2419	0.82	323	0	0	0.00	95.58	96.24	0.00	0.00	0
+36	20	132	4.06	3250	2419	0.80	749	0	0	0.00	95.97	96.67	0.00	0.00	0
+37	21	115	3.61	3195	2419	1.25	517	0	0	0.00	96.42	97.12	0.00	0.00	0
+38	22	83	2.85	2914	2419	1.14	308	0	0	0.00	97.18	97.88	0.00	0.00	0
+39	23	59	2.25	2626	2419	0.65	445	0	0	0.00	97.81	98.47	0.00	0.00	0
+40	24	113	3.58	3147	2419	0.88	261	0	0	0.00	96.45	97.15	0.00	0.00	0
+41	25	88	2.79	3138	2419	0.95	244	0	0	0.00	97.24	97.95	0.00	0.00	0
+42	26	86	2.71	3178	2419	1.00	244	0	0	0.00	97.31	98.03	0.00	0.00	0
+43	27	31	1.28	2425	2419	0.62	161	0	0	0.00	98.75	99.47	0.00	0.00	0
+44	28	26	0.97	2710	2419	0.91	130	0	0	0.00	99.05	99.80	0.00	0.00	0
+45	29	30	1.13	2656	2419	0.85	147	0	0	0.00	98.90	99.64	0.00	0.00	0
+46	30	43	1.47	2910	2419	0.88	145	0	0	0.00	98.55	99.29	0.00	0.00	0
+47	31	69	2.28	3028	2419	1.10	234	0	0	0.00	97.74	98.46	0.00	0.00	0
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	207	5.47	3780	2418	1.65	17702	0	0	0.00	94.59	91.81	0.00	0.00	24	76.12	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	55.27	49.36	0.19	4000
+0	0	224	7.58	2954	2419	1.12	1169	0	0	0.01	92.89	92.86	0.00	0.00	0	76.21	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	55.33	49.42	0.19	4000
+0	1	14	0.63	2217	2419	0.59	120	0	0	0.00	99.38	92.86
+4	2	138	4.54	3038	2419	1.32	505	0	0	0.00	95.77	96.09	0.00	0.00	0
+4	3	5	0.29	1829	2419	0.55	83	0	0	0.00	99.72	96.09
+8	4	269	7.10	3785	2419	1.22	733	0	0	0.00	93.14	93.52	0.00	0.00	0
+8	5	6	0.36	1730	2419	0.55	84	0	0	0.00	99.65	93.52
+12	6	416	10.61	3919	2419	1.33	1088	0	0	0.05	89.66	89.97	0.00	0.00	0
+12	7	6	0.34	1798	2419	0.43	85	0	0	0.00	99.67	89.97
+16	8	1433	31.46	4556	2419	2.34	2437	0	0	0.00	68.66	68.94	0.00	0.00	24
+16	9	7	0.25	2896	2419	0.31	84	0	0	0.00	99.76	68.94
+20	10	1177	26.12	4507	2419	2.25	2108	0	0	0.03	74.01	74.32	0.00	0.00	10
+20	11	6	0.29	2166	2419	0.50	80	0	0	0.00	99.72	74.32
+24	12	400	10.31	3881	2419	1.47	1595	0	0	0.00	89.97	90.27	0.00	0.00	0
+24	13	6	0.33	1885	2419	0.47	80	0	0	0.00	99.68	90.28
+28	14	477	12.09	3947	2419	2.02	956	0	0	0.01	88.19	88.46	0.00	0.00	2
+28	15	5	0.26	1847	2419	0.46	81	0	0	0.00	99.75	88.46
+32	16	243	7.30	3327	2419	1.00	561	0	0	0.00	92.77	93.35	0.00	0.00	0
+33	17	258	7.59	3403	2419	0.87	618	0	0	0.00	92.48	93.05	0.00	0.00	0
+34	18	153	4.54	3374	2419	1.07	533	0	0	0.00	95.53	96.13	0.00	0.00	0
+35	19	309	8.78	3517	2419	0.99	1017	0	0	0.00	91.26	91.86	0.00	0.00	0
+36	20	86	2.83	3047	2419	0.90	509	0	0	0.00	97.20	97.91	0.00	0.00	0
+37	21	121	3.89	3101	2419	0.98	422	0	0	0.00	96.13	96.84	0.00	0.00	0
+38	22	155	4.81	3216	2419	0.78	515	0	0	0.00	95.21	95.90	0.00	0.00	0
+39	23	151	4.60	3291	2419	1.42	340	0	0	0.00	95.43	96.11	0.00	0.00	0
+40	24	30	1.21	2486	2419	0.66	193	0	0	0.00	98.82	99.55	0.00	0.00	0
+41	25	51	1.88	2705	2419	0.57	164	0	0	0.00	98.14	98.87	0.00	0.00	0
+42	26	81	2.46	3287	2419	0.90	167	0	0	0.00	97.56	98.29	0.00	0.00	0
+43	27	35	1.33	2597	2419	0.80	280	0	0	0.00	98.70	99.42	0.00	0.00	0
+44	28	79	2.51	3139	2419	1.02	254	0	0	0.01	97.52	98.24	0.00	0.00	0
+45	29	136	4.11	3314	2419	1.32	392	0	0	0.00	95.92	96.61	0.00	0.00	0
+46	30	77	2.56	3020	2419	0.93	291	0	0	0.00	97.48	98.18	0.00	0.00	0
+47	31	58	1.96	2934	2419	0.99	158	0	0	0.01	98.06	98.78	0.00	0.00	0
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	249	6.36	3914	2420	1.67	22425	0	0	0.01	93.75	89.90	0.00	0.00	15	74.77	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	60.92	54.88	0.19	4000
+0	0	140	6.10	2291	2419	1.27	1313	0	0	0.00	94.35	94.48	0.00	0.00	0	74.69	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	60.85	54.82	0.19	4000
+0	1	9	0.43	2133	2419	0.44	90	0	0	0.00	99.58	94.48
+4	2	613	13.98	4385	2419	1.81	1342	0	0	0.00	86.22	86.58	0.00	0.00	2
+4	3	6	0.31	1968	2419	0.50	89	0	0	0.00	99.70	86.58
+8	4	443	11.25	3941	2419	1.47	1770	0	0	0.10	89.02	89.30	0.00	0.00	0
+8	5	8	0.40	1870	2419	0.52	88	0	0	0.00	99.61	89.31
+12	6	486	12.54	3878	2419	1.50	1555	0	0	0.02	87.69	88.01	0.00	0.00	1
+12	7	5	0.34	1587	2419	0.36	85	0	0	0.00	99.67	88.01
+16	8	1076	24.61	4371	2419	1.88	1661	0	0	0.01	75.56	75.84	0.00	0.00	12
+16	9	8	0.34	2270	2419	0.37	83	0	0	0.00	99.67	75.84
+20	10	1509	33.36	4524	2419	2.31	2623	0	0	0.04	66.79	66.10	0.00	0.00	15
+20	11	57	1.49	3821	2419	1.57	108	0	0	0.00	98.52	66.10
+24	12	716	17.16	4171	2419	1.57	1788	0	0	0.09	83.10	83.32	0.00	0.00	1
+24	13	8	0.35	2199	2419	0.44	89	0	0	0.00	99.67	83.31
+28	14	983	22.34	4403	2419	2.04	2558	0	0	0.04	77.88	78.14	0.00	0.00	9
+28	15	6	0.28	2027	2419	0.34	83	0	0	0.00	99.73	78.14
+32	16	447	12.92	3457	2419	1.14	1445	0	0	0.01	87.12	87.69	0.00	0.00	0
+33	17	165	4.91	3361	2419	0.75	332	0	0	0.00	95.14	95.77	0.00	0.00	0
+34	18	140	4.19	3352	2419	0.85	436	0	0	0.00	95.86	96.51	0.00	0.00	0
+35	19	235	6.91	3404	2419	1.03	1085	0	0	0.00	93.12	93.76	0.00	0.00	0
+36	20	102	3.43	2986	2419	0.99	421	0	0	0.00	96.59	97.31	0.00	0.00	0
+37	21	142	4.51	3157	2419	1.12	805	0	0	0.00	95.51	96.20	0.00	0.00	0
+38	22	166	4.72	3505	2419	1.03	852	0	0	0.00	95.29	96.00	0.00	0.00	0
+39	23	16	0.72	2209	2419	0.56	115	0	0	0.00	99.31	100.05	0.00	0.00	0
+40	24	41	1.41	2886	2419	0.83	184	0	0	0.00	98.62	99.35	0.00	0.00	0
+41	25	56	1.89	2964	2419	0.99	142	0	0	0.00	98.13	98.87	0.00	0.00	0
+42	26	39	1.35	2851	2419	0.94	162	0	0	0.00	98.67	99.41	0.00	0.00	0
+43	27	41	1.61	2537	2419	0.84	174	0	0	0.00	98.42	99.14	0.00	0.00	0
+44	28	38	1.30	2946	2419	0.95	192	0	0	0.01	98.72	99.47	0.00	0.00	0
+45	29	175	4.85	3606	2419	1.07	187	0	0	0.00	95.16	95.88	0.00	0.00	0
+46	30	39	1.73	2269	2419	0.74	429	0	0	0.00	98.34	98.99	0.00	0.00	0
+47	31	57	1.92	2953	2419	0.87	139	0	0	0.00	98.10	98.83	0.00	0.00	0
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	196	5.17	3798	2416	1.69	16951	0	0	0.00	94.79	92.00	0.00	0.00	29	75.77	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	52.82	46.91	0.19	3500
+0	0	148	5.63	2622	2419	1.03	1190	0	0	0.01	94.78	94.97	0.00	0.00	0	76.01	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	52.99	47.06	0.20	3500
+0	1	8	0.44	1881	2419	0.58	102	0	0	0.00	99.57	94.96
+4	2	398	10.18	3914	2419	1.32	1093	0	0	0.01	90.03	90.43	0.00	0.00	0
+4	3	5	0.26	1893	2419	0.40	83	0	0	0.00	99.75	90.43
+8	4	289	7.76	3717	2419	1.33	643	0	0	0.02	92.46	92.88	0.00	0.00	0
+8	5	7	0.38	1895	2419	0.51	84	0	0	0.00	99.63	92.88
+12	6	302	8.06	3755	2419	1.39	454	0	0	0.00	92.16	92.52	0.00	0.00	0
+12	7	5	0.34	1567	2419	0.59	87	0	0	0.00	99.67	92.52
+16	8	879	20.39	4311	2419	2.26	1653	0	0	0.00	79.79	80.12	0.00	0.00	8
+16	9	6	0.33	1823	2419	0.34	90	0	0	0.00	99.68	80.12
+20	10	264	6.09	4333	2419	1.32	558	0	0	0.01	94.11	54.45	0.00	0.00	29
+20	11	1902	40.83	4658	2419	2.49	2610	0	0	0.01	59.10	54.31
+24	12	312	8.46	3688	2419	1.19	1591	0	0	0.00	91.84	91.85	0.00	0.00	0
+24	13	20	0.67	3054	2419	1.04	180	0	0	0.00	99.34	91.85
+28	14	288	7.89	3644	2419	1.28	894	0	0	0.01	92.43	92.72	0.00	0.00	0
+28	15	5	0.28	1645	2419	0.45	87	0	0	0.00	99.73	92.72
+32	16	209	6.62	3162	2419	0.93	593	0	0	0.01	93.44	94.03	0.00	0.00	0
+33	17	118	3.64	3238	2419	0.83	416	0	0	0.00	96.41	97.06	0.00	0.00	0
+34	18	141	4.60	3063	2419	0.77	396	0	0	0.01	95.46	96.09	0.00	0.00	0
+35	19	108	3.46	3109	2419	0.73	345	0	0	0.00	96.59	97.24	0.00	0.00	0
+36	20	113	3.50	3232	2419	0.92	457	0	0	0.00	96.53	97.23	0.00	0.00	0
+37	21	155	4.80	3219	2419	1.03	952	0	0	0.00	95.24	95.90	0.00	0.00	0
+38	22	104	3.36	3104	2419	0.97	409	0	0	0.00	96.68	97.36	0.00	0.00	0
+39	23	87	3.10	2806	2419	0.80	363	0	0	0.00	96.95	97.62	0.00	0.00	0
+40	24	51	1.82	2803	2419	0.75	306	0	0	0.00	98.21	98.93	0.00	0.00	0
+41	25	59	2.04	2892	2419	0.70	168	0	0	0.01	97.99	98.71	0.00	0.00	0
+42	26	44	1.50	2918	2419	0.90	137	0	0	0.00	98.52	99.26	0.00	0.00	0
+43	27	22	1.05	2116	2419	0.66	122	0	0	0.00	98.97	99.71	0.00	0.00	0
+44	28	66	2.26	2914	2419	1.34	303	0	0	0.00	97.79	98.48	0.00	0.00	0
+45	29	47	1.73	2739	2419	0.92	270	0	0	0.01	98.31	99.00	0.00	0.00	0
+46	30	63	1.96	3211	2419	0.91	140	0	0	0.00	98.06	98.79	0.00	0.00	0
+47	31	62	2.11	2953	2419	0.81	175	0	0	0.00	97.92	98.64	0.00	0.00	0
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	253	6.47	3908	2422	1.65	22020	0	0	0.01	93.73	89.79	0.00	0.00	45	75.61	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	59.11	52.97	0.20	4000
+0	0	343	10.15	3378	2419	1.26	1347	0	0	0.00	90.24	90.35	0.00	0.00	0	75.37	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	58.92	52.80	0.20	4000
+0	1	19	0.74	2544	2419	0.67	123	0	0	0.00	99.28	90.36
+4	2	265	7.04	3765	2419	1.48	753	0	0	0.01	93.14	93.58	0.00	0.00	0
+4	3	10	0.47	2084	2419	0.71	106	0	0	0.00	99.55	93.57
+8	4	341	9.19	3708	2419	1.34	1466	0	0	0.01	91.03	91.41	0.00	0.00	0
+8	5	13	0.56	2240	2419	0.65	103	0	0	0.00	99.45	91.41
+12	6	173	5.52	3126	2419	1.41	921	0	0	0.03	94.77	95.02	0.00	0.00	0
+12	7	10	0.46	2228	2419	0.85	103	0	0	0.00	99.55	95.01
+16	8	791	18.61	4250	2419	1.59	1260	0	0	0.00	81.61	81.38	0.00	0.00	3
+16	9	42	1.35	3107	2419	0.58	175	0	0	0.00	98.67	81.38
+20	10	261	6.24	4181	2419	0.82	826	0	0	0.01	94.07	32.98	0.00	0.00	45
+20	11	3009	64.89	4638	2419	2.37	4830	0	0	0.01	35.00	33.06
+24	12	633	15.52	4076	2419	1.39	1450	0	0	0.18	84.77	84.84	0.00	0.00	0
+24	13	17	0.66	2560	2419	0.68	131	0	0	0.00	99.36	84.84
+28	14	546	13.35	4091	2419	1.38	1679	0	0	0.00	86.89	87.21	0.00	0.00	3
+28	15	10	0.43	2403	2419	0.57	108	0	0	0.00	99.58	87.20
+32	16	330	9.66	3419	2419	1.09	1265	0	0	0.03	90.38	90.99	0.00	0.00	0
+33	17	172	5.16	3341	2419	0.98	415	0	0	0.00	94.88	95.53	0.00	0.00	0
+34	18	129	3.88	3327	2419	0.98	413	0	0	0.00	96.14	96.84	0.00	0.00	0
+35	19	148	4.53	3279	2419	0.83	828	0	0	0.02	95.53	96.17	0.00	0.00	0
+36	20	62	2.38	2596	2419	0.92	397	0	0	0.01	97.66	98.35	0.00	0.00	0
+37	21	94	3.03	3099	2419	1.06	935	0	0	0.00	96.99	97.70	0.00	0.00	0
+38	22	131	3.98	3300	2419	0.93	559	0	0	0.00	96.04	96.75	0.00	0.00	0
+39	23	122	3.77	3246	2419	1.27	474	0	0	0.00	96.26	96.96	0.00	0.00	0
+40	24	71	2.49	2873	2419	0.63	196	0	0	0.00	97.55	98.25	0.00	0.00	0
+41	25	73	2.41	3031	2419	0.87	178	0	0	0.00	97.61	98.33	0.00	0.00	0
+42	26	104	3.92	2662	2419	0.76	259	0	0	0.00	96.12	96.79	0.00	0.00	0
+43	27	39	1.70	2307	2419	0.64	154	0	0	0.00	98.34	99.04	0.00	0.00	0
+44	28	29	1.08	2719	2419	0.76	148	0	0	0.00	98.95	99.69	0.00	0.00	0
+45	29	33	1.24	2688	2419	0.91	143	0	0	0.00	98.79	99.53	0.00	0.00	0
+46	30	39	1.41	2742	2419	0.91	141	0	0	0.00	98.61	99.35	0.00	0.00	0
+47	31	32	1.25	2566	2419	0.87	134	0	0	0.00	98.77	99.51	0.00	0.00	0
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	196	5.06	3867	2417	1.65	14860	0	0	0.01	94.94	92.13	0.00	0.00	35	77.20	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	54.32	48.44	0.19	4000
+0	0	220	7.43	2966	2419	1.12	1320	0	0	0.00	93.07	93.11	0.00	0.00	0	77.50	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	54.53	48.63	0.19	4000
+0	1	10	0.46	2200	2419	0.50	93	0	0	0.00	99.55	93.11
+4	2	191	5.76	3315	2419	1.06	532	0	0	0.06	94.52	94.89	0.00	0.00	0
+4	3	3	0.23	1455	2419	0.19	79	0	0	0.00	99.78	94.89
+8	4	280	7.36	3806	2419	1.14	1105	0	0	0.01	92.88	93.23	0.00	0.00	0
+8	5	6	0.33	1763	2419	0.58	79	0	0	0.00	99.68	93.24
+12	6	215	6.16	3482	2419	1.19	839	0	0	0.06	94.18	93.63	0.00	0.00	0
+12	7	76	1.84	4118	2419	0.77	131	0	0	0.00	98.16	93.59
+16	8	445	11.12	3999	2419	1.52	860	0	0	0.00	89.17	89.47	0.00	0.00	1
+16	9	4	0.27	1580	2419	0.22	81	0	0	0.00	99.74	89.47
+20	10	785	17.27	4542	2419	1.72	890	0	0	0.01	82.98	41.66	0.00	0.00	35
+20	11	2052	43.63	4704	2419	2.44	2992	0	0	0.00	56.29	41.67
+24	12	192	6.25	3073	2419	0.97	841	0	0	0.01	94.12	94.33	0.00	0.00	0
+24	13	6	0.31	1908	2419	0.59	83	0	0	0.00	99.70	94.33
+28	14	489	12.09	4048	2419	1.48	1080	0	0	0.05	88.19	88.50	0.00	0.00	1
+28	15	3	0.23	1498	2419	0.21	80	0	0	0.00	99.78	88.50
+32	16	209	6.52	3212	2419	0.91	524	0	0	0.01	93.53	94.15	0.00	0.00	0
+33	17	136	4.20	3233	2419	0.89	379	0	0	0.00	95.85	96.50	0.00	0.00	0
+34	18	197	5.55	3539	2419	1.09	500	0	0	0.00	94.48	95.15	0.00	0.00	0
+35	19	142	4.15	3420	2419	0.83	327	0	0	0.00	95.89	96.56	0.00	0.00	0
+36	20	67	2.17	3076	2419	1.03	224	0	0	0.00	97.85	98.58	0.00	0.00	0
+37	21	74	2.67	2771	2419	0.92	274	0	0	0.00	97.36	98.07	0.00	0.00	0
+38	22	108	3.06	3528	2419	1.04	164	0	0	0.00	96.95	97.69	0.00	0.00	0
+39	23	38	1.34	2844	2419	0.96	240	0	0	0.00	98.69	99.42	0.00	0.00	0
+40	24	14	0.86	1578	2419	0.53	111	0	0	0.00	99.17	99.91	0.00	0.00	0
+41	25	27	1.07	2524	2419	0.67	117	0	0	0.00	98.94	99.70	0.00	0.00	0
+42	26	14	0.64	2141	2419	0.87	145	0	0	0.00	99.38	100.14	0.00	0.00	0
+43	27	12	0.98	1269	2419	0.68	126	0	0	0.00	99.04	99.78	0.00	0.00	0
+44	28	41	1.34	3050	2419	1.24	141	0	0	0.00	98.68	99.42	0.00	0.00	0
+45	29	100	3.11	3226	2419	1.29	203	0	0	0.00	96.91	97.63	0.00	0.00	0
+46	30	53	1.74	3025	2419	1.09	136	0	0	0.01	98.28	99.01	0.00	0.00	0
+47	31	54	1.81	2985	2419	1.14	164	0	0	0.00	98.22	98.94	0.00	0.00	0
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	243	6.26	3879	2419	1.66	24743	0	0	0.01	93.80	90.02	0.00	0.00	42	75.86	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	56.59	50.51	0.21	4000
+0	0	200	6.99	2854	2419	1.37	1540	0	0	0.03	93.38	93.60	0.00	0.00	0	75.67	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	56.45	50.38	0.21	4000
+0	1	10	0.47	2139	2419	0.45	103	0	0	0.00	99.55	93.60
+4	2	401	9.95	4025	2419	1.50	1225	0	0	0.01	90.24	90.64	0.00	0.00	0
+4	3	6	0.34	1645	2419	0.42	99	0	0	0.00	99.67	90.64
+8	4	524	12.94	4047	2419	1.31	1139	0	0	0.03	87.25	87.58	0.00	0.00	0
+8	5	9	0.44	2017	2419	0.49	100	0	0	0.00	99.58	87.58
+12	6	588	14.30	4114	2419	1.56	924	0	0	0.00	85.87	84.83	0.00	0.00	2
+12	7	90	2.17	4145	2419	0.80	1273	0	0	0.00	97.84	84.87
+16	8	401	10.66	3767	2419	1.27	2004	0	0	0.07	89.61	89.90	0.00	0.00	0
+16	9	8	0.45	1835	2419	0.53	100	0	0	0.00	99.57	89.91
+20	10	854	19.06	4480	2419	1.85	1743	0	0	0.03	81.16	37.56	0.00	0.00	42
+20	11	2101	46.46	4523	2419	2.52	4212	0	0	0.03	53.46	37.56
+24	12	361	9.99	3614	2419	1.09	1415	0	0	0.06	90.27	90.58	0.00	0.00	0
+24	13	8	0.38	2127	2419	0.50	98	0	0	0.00	99.63	90.58
+28	14	654	15.90	4114	2419	1.62	1953	0	0	0.03	84.35	84.62	0.00	0.00	1
+28	15	6	0.29	2155	2419	0.42	94	0	0	0.00	99.72	84.62
+32	16	246	7.63	3219	2419	0.99	878	0	0	0.00	92.45	92.99	0.00	0.00	0
+33	17	308	9.08	3389	2419	1.02	787	0	0	0.00	91.01	91.53	0.00	0.00	0
+34	18	242	6.86	3529	2419	0.89	369	0	0	0.00	93.19	93.81	0.00	0.00	0
+35	19	139	4.08	3401	2419	0.96	294	0	0	0.00	95.96	96.62	0.00	0.00	0
+36	20	59	2.09	2840	2419	0.71	250	0	0	0.00	97.94	98.66	0.00	0.00	0
+37	21	41	1.68	2409	2419	0.75	229	0	0	0.00	98.34	99.07	0.00	0.00	0
+38	22	38	1.42	2666	2419	1.07	177	0	0	0.00	98.60	99.33	0.00	0.00	0
+39	23	34	1.50	2245	2419	0.89	215	0	0	0.00	98.53	99.26	0.00	0.00	0
+40	24	17	0.82	2028	2419	0.58	153	0	0	0.00	99.21	99.94	0.00	0.00	0
+41	25	42	1.46	2896	2419	0.88	127	0	0	0.00	98.56	99.31	0.00	0.00	0
+42	26	62	2.27	2739	2419	1.00	474	0	0	0.00	97.76	98.48	0.00	0.00	0
+43	27	16	0.73	2176	2419	0.62	112	0	0	0.00	99.29	100.04	0.00	0.00	0
+44	28	21	0.84	2492	2419	0.72	129	0	0	0.00	99.18	99.93	0.00	0.00	0
+45	29	201	6.03	3328	2419	1.26	1974	0	0	0.00	93.99	94.68	0.00	0.00	0
+46	30	56	1.88	2984	2419	0.99	419	0	0	0.00	98.15	98.86	0.00	0.00	0
+47	31	34	1.27	2694	2419	0.93	134	0	0	0.00	98.75	99.49	0.00	0.00	0
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	203	5.29	3830	2421	1.64	16685	0	0	0.01	94.86	91.73	0.00	0.00	41	77.01	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	54.80	48.65	0.18	3900
+0	0	177	6.32	2801	2419	1.28	1151	0	0	0.00	94.16	94.21	0.00	0.00	0	77.00	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	54.79	48.64	0.18	3900
+0	1	11	0.56	1945	2419	0.47	127	0	0	0.00	99.46	94.21
+4	2	125	4.50	2778	2419	1.05	504	0	0	0.03	95.83	96.05	0.00	0.00	0
+4	3	9	0.38	2244	2419	0.76	110	0	0	0.00	99.63	96.06
+8	4	262	7.35	3564	2419	1.20	481	0	0	0.00	92.87	93.26	0.00	0.00	0
+8	5	7	0.43	1750	2419	0.46	104	0	0	0.00	99.59	93.26
+12	6	473	11.67	4050	2419	1.51	1848	0	0	0.00	88.56	88.92	0.00	0.00	2
+12	7	6	0.35	1613	2419	0.30	101	0	0	0.00	99.66	88.91
+16	8	475	12.08	3933	2419	1.52	1271	0	0	0.09	88.24	88.46	0.00	0.00	1
+16	9	6	0.40	1570	2419	0.34	99	0	0	0.00	99.61	88.45
+20	10	1139	24.80	4591	2419	1.78	1880	0	0	0.02	75.38	43.40	0.00	0.00	41
+20	11	1657	36.03	4599	2419	2.40	1920	0	0	0.00	63.90	43.39
+24	12	582	14.28	4080	2419	1.60	1089	0	0	0.05	85.97	86.27	0.00	0.00	2
+24	13	7	0.38	1724	2419	0.36	98	0	0	0.00	99.63	86.27
+28	14	356	9.27	3834	2419	1.34	962	0	0	0.01	90.97	91.30	0.00	0.00	0
+28	15	6	0.34	1661	2419	0.45	106	0	0	0.00	99.67	91.31
+32	16	190	6.16	3076	2419	0.90	620	0	0	0.00	93.91	94.49	0.00	0.00	0
+33	17	179	5.45	3287	2419	0.85	408	0	0	0.00	94.61	95.22	0.00	0.00	0
+34	18	187	5.47	3425	2419	0.93	330	0	0	0.00	94.57	95.22	0.00	0.00	0
+35	19	139	4.20	3312	2419	0.83	314	0	0	0.00	95.83	96.50	0.00	0.00	0
+36	20	63	2.35	2686	2419	0.98	171	0	0	0.00	97.68	98.39	0.00	0.00	0
+37	21	29	1.13	2589	2419	0.70	138	0	0	0.00	98.89	99.63	0.00	0.00	0
+38	22	68	2.30	2954	2419	1.13	227	0	0	0.00	97.72	98.45	0.00	0.00	0
+39	23	25	1.30	1953	2419	0.69	242	0	0	0.00	98.73	99.45	0.00	0.00	0
+40	24	13	0.62	2048	2419	0.81	128	0	0	0.00	99.40	100.15	0.00	0.00	0
+41	25	13	0.65	1957	2419	0.86	123	0	0	0.00	99.37	100.13	0.00	0.00	0
+42	26	21	1.34	1563	2419	0.77	502	0	0	0.00	98.75	99.38	0.00	0.00	0
+43	27	12	0.67	1773	2419	0.78	155	0	0	0.00	99.35	100.09	0.00	0.00	0
+44	28	44	1.61	2721	2419	1.60	150	0	0	0.00	98.41	99.15	0.00	0.00	0
+45	29	78	2.57	3040	2419	0.71	197	0	0	0.00	97.45	98.18	0.00	0.00	0
+46	30	79	2.64	3009	2419	0.91	913	0	0	0.00	97.39	98.10	0.00	0.00	0
+47	31	45	1.61	2802	2419	1.01	216	0	0	0.00	98.41	99.14	0.00	0.00	0
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	230	5.98	3839	2420	1.69	22845	0	0	0.01	94.15	90.53	0.00	0.00	42	74.92	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	55.42	49.43	0.22	4000
+0	0	182	6.55	2784	2419	1.49	1490	0	0	0.04	93.84	94.00	0.00	0.00	0	74.82	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	55.35	49.36	0.22	4000
+0	1	9	0.52	1782	2419	0.43	108	0	0	0.00	99.50	94.00
+4	2	219	6.42	3412	2419	1.22	1013	0	0	0.02	93.79	94.22	0.00	0.00	0
+4	3	3	0.26	1313	2419	0.24	92	0	0	0.00	99.76	94.22
+8	4	282	7.73	3643	2419	1.29	1268	0	0	0.03	92.47	91.88	0.00	0.00	0
+8	5	54	1.44	3742	2419	1.25	131	0	0	0.00	98.57	91.88
+12	6	585	14.52	4029	2419	1.45	1727	0	0	0.04	85.72	86.02	0.00	0.00	1
+12	7	6	0.34	1647	2419	0.22	88	0	0	0.00	99.67	86.02
+16	8	774	18.78	4120	2419	1.58	2153	0	0	0.10	81.48	81.69	0.00	0.00	1
+16	9	7	0.37	1852	2419	0.29	91	0	0	0.00	99.65	81.69
+20	10	371	8.85	4196	2419	1.10	756	0	0	0.01	91.43	37.82	0.00	0.00	42
+20	11	2651	57.81	4586	2419	2.51	5503	0	0	0.02	42.09	37.82
+24	12	369	9.99	3688	2419	1.23	1163	0	0	0.02	90.26	90.56	0.00	0.00	0
+24	13	6	0.37	1514	2419	0.26	93	0	0	0.00	99.64	90.55
+28	14	418	10.94	3819	2419	1.30	1751	0	0	0.02	89.38	89.62	0.00	0.00	0
+28	15	4	0.27	1580	2419	0.22	88	0	0	0.00	99.74	89.61
+32	16	245	7.92	3093	2419	0.85	914	0	0	0.00	92.14	92.72	0.00	0.00	0
+33	17	281	8.25	3402	2419	0.94	948	0	0	0.00	91.80	92.39	0.00	0.00	0
+34	18	149	4.49	3325	2419	0.86	432	0	0	0.00	95.55	96.21	0.00	0.00	0
+35	19	109	3.25	3350	2419	0.91	359	0	0	0.00	96.78	97.48	0.00	0.00	0
+36	20	75	2.86	2634	2419	0.88	323	0	0	0.00	97.18	97.86	0.00	0.00	0
+37	21	68	2.08	3255	2419	0.99	136	0	0	0.00	97.94	98.68	0.00	0.00	0
+38	22	64	2.21	2904	2419	1.04	225	0	0	0.00	97.82	98.54	0.00	0.00	0
+39	23	38	1.47	2571	2419	0.85	176	0	0	0.00	98.55	99.28	0.00	0.00	0
+40	24	94	3.12	3009	2419	1.07	378	0	0	0.00	96.91	97.62	0.00	0.00	0
+41	25	52	1.77	2947	2419	0.99	239	0	0	0.00	98.25	98.98	0.00	0.00	0
+42	26	45	1.94	2321	2419	0.87	540	0	0	0.00	98.15	98.76	0.00	0.00	0
+43	27	63	2.01	3115	2419	0.99	133	0	0	0.00	98.01	98.74	0.00	0.00	0
+44	28	33	1.49	2222	2419	1.05	183	0	0	0.00	98.54	99.26	0.00	0.00	0
+45	29	28	1.07	2570	2419	1.16	122	0	0	0.00	98.95	99.69	0.00	0.00	0
+46	30	36	1.22	2915	2419	0.89	108	0	0	0.00	98.79	99.54	0.00	0.00	0
+47	31	26	1.01	2546	2419	1.05	114	0	0	0.00	99.01	99.76	0.00	0.00	0
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	222	5.71	3892	2419	1.66	18505	0	0	0.01	94.37	90.72	0.00	0.00	42	77.67	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	55.59	49.55	0.17	3600
+0	0	276	8.64	3190	2419	1.38	1388	0	0	0.00	91.80	91.82	0.00	0.00	0	77.71	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	55.62	49.58	0.17	3600
+0	1	15	0.67	2183	2419	0.54	166	0	0	0.00	99.35	91.82
+4	2	126	4.42	2861	2419	1.19	661	0	0	0.00	95.85	95.94	0.00	0.00	0
+4	3	21	0.68	3105	2419	1.27	140	0	0	0.00	99.33	95.94
+8	4	128	4.24	3027	2419	1.05	480	0	0	0.06	95.99	96.43	0.00	0.00	0
+8	5	7	0.42	1581	2419	0.38	132	0	0	0.00	99.60	96.43
+12	6	412	10.50	3928	2419	1.25	707	0	0	0.01	89.75	90.08	0.00	0.00	0
+12	7	8	0.43	1878	2419	0.43	135	0	0	0.00	99.58	90.08
+16	8	651	16.02	4064	2419	1.39	1558	0	0	0.06	84.31	84.49	0.00	0.00	1
+16	9	7	0.46	1553	2419	0.36	134	0	0	0.00	99.56	84.49
+20	10	288	7.01	4109	2419	0.82	772	0	0	0.02	93.28	31.98	0.00	0.00	42
+20	11	2982	65.04	4586	2419	2.37	3362	0	0	0.08	34.84	31.96
+24	12	378	10.28	3679	2419	1.26	1085	0	0	0.04	90.00	90.27	0.00	0.00	0
+24	13	7	0.43	1699	2419	0.36	139	0	0	0.00	99.58	90.27
+28	14	563	13.90	4054	2419	1.18	1863	0	0	0.03	86.39	81.74	0.00	0.00	0
+28	15	238	5.41	4399	2419	1.40	708	0	0	0.02	94.61	81.74
+32	16	159	5.09	3126	2419	0.80	594	0	0	0.00	94.97	95.58	0.00	0.00	0
+33	17	144	4.49	3203	2419	0.84	452	0	0	0.00	95.56	96.20	0.00	0.00	0
+34	18	136	4.04	3371	2419	0.83	449	0	0	0.00	96.02	96.66	0.00	0.00	0
+35	19	151	4.64	3261	2419	0.87	565	0	0	0.00	95.43	96.03	0.00	0.00	0
+36	20	66	2.50	2635	2419	0.90	241	0	0	0.00	97.54	98.24	0.00	0.00	0
+37	21	55	1.91	2875	2419	1.07	302	0	0	0.00	98.12	98.84	0.00	0.00	0
+38	22	38	1.33	2834	2419	0.85	185	0	0	0.00	98.69	99.42	0.00	0.00	0
+39	23	50	1.73	2879	2419	0.89	236	0	0	0.00	98.32	99.01	0.00	0.00	0
+40	24	33	1.19	2818	2419	1.17	221	0	0	0.00	98.84	99.57	0.00	0.00	0
+41	25	49	1.72	2858	2419	0.83	632	0	0	0.00	98.30	99.03	0.00	0.00	0
+42	26	15	0.80	1861	2419	0.61	206	0	0	0.00	99.23	99.95	0.00	0.00	0
+43	27	10	0.69	1489	2419	0.50	193	0	0	0.00	99.35	100.06	0.00	0.00	0
+44	28	47	1.71	2740	2419	1.46	243	0	0	0.00	98.32	99.04	0.00	0.00	0
+45	29	19	0.78	2371	2419	0.74	151	0	0	0.00	99.24	99.99	0.00	0.00	0
+46	30	19	0.91	2107	2419	0.79	252	0	0	0.00	99.12	99.86	0.00	0.00	0
+47	31	12	0.68	1765	2419	0.71	153	0	0	0.00	99.34	100.08	0.00	0.00	0
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	240	6.26	3836	2420	1.64	23731	0	0	0.01	93.85	90.05	0.00	0.00	52	74.33	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	56.21	50.17	0.22	4000
+0	0	188	6.63	2830	2419	1.21	1355	0	0	0.00	93.77	90.87	0.00	0.00	0	74.28	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	56.17	50.14	0.22	4000
+0	1	143	4.05	3519	2419	0.69	259	0	0	0.01	95.98	90.88
+4	2	276	7.55	3662	2419	1.31	1061	0	0	0.00	92.63	92.91	0.00	0.00	0
+4	3	12	0.54	2289	2419	0.81	130	0	0	0.00	99.48	92.91
+8	4	318	8.64	3684	2419	1.27	1240	0	0	0.08	91.65	91.92	0.00	0.00	0
+8	5	9	0.51	1805	2419	0.45	126	0	0	0.00	99.51	91.92
+12	6	512	13.02	3935	2419	1.68	1560	0	0	0.00	87.22	87.52	0.00	0.00	1
+12	7	8	0.41	1854	2419	0.39	113	0	0	0.00	99.60	87.52
+16	8	482	12.32	3910	2419	1.30	1095	0	0	0.02	87.87	88.23	0.00	0.00	0
+16	9	10	0.52	1853	2419	0.48	117	0	0	0.00	99.49	88.23
+20	10	231	5.50	4210	2419	0.78	536	0	0	0.00	94.74	37.22	0.00	0.00	52
+20	11	2790	61.02	4573	2419	2.41	5943	0	0	0.01	38.87	37.24
+24	12	401	10.64	3765	2419	1.46	1552	0	0	0.02	89.60	89.91	0.00	0.00	0
+24	13	9	0.42	2003	2419	0.42	113	0	0	0.00	99.59	89.91
+28	14	272	7.66	3553	2419	1.17	684	0	0	0.01	92.63	79.61	0.00	0.00	3
+28	15	627	14.59	4295	2419	1.34	1921	0	0	0.04	85.42	79.61
+32	16	200	6.61	3020	2419	0.96	982	0	0	0.01	93.46	94.04	0.00	0.00	0
+33	17	259	7.63	3399	2419	1.14	995	0	0	0.00	92.42	93.02	0.00	0.00	0
+34	18	148	4.57	3236	2419	1.01	534	0	0	0.03	95.49	96.11	0.00	0.00	0
+35	19	108	3.29	3298	2419	0.86	334	0	0	0.00	96.75	97.43	0.00	0.00	0
+36	20	114	3.54	3220	2419	0.93	231	0	0	0.00	96.49	97.19	0.00	0.00	0
+37	21	83	2.78	2978	2419	0.81	304	0	0	0.00	97.27	97.94	0.00	0.00	0
+38	22	87	3.00	2915	2419	0.85	264	0	0	0.00	97.04	97.72	0.00	0.00	0
+39	23	93	3.01	3078	2419	0.85	234	0	0	0.00	97.03	97.70	0.00	0.00	0
+40	24	51	2.12	2427	2419	0.88	259	0	0	0.00	97.91	98.63	0.00	0.00	0
+41	25	42	1.66	2539	2419	0.77	250	0	0	0.00	98.37	99.09	0.00	0.00	0
+42	26	57	2.06	2753	2419	0.89	233	0	0	0.00	97.97	98.68	0.00	0.00	0
+43	27	40	1.51	2628	2419	0.91	150	0	0	0.00	98.52	99.24	0.00	0.00	0
+44	28	11	0.56	1906	2419	0.99	125	0	0	0.00	99.46	100.21	0.00	0.00	0
+45	29	22	0.96	2256	2419	0.96	192	0	0	0.00	99.06	99.81	0.00	0.00	0
+46	30	19	0.87	2185	2419	0.83	176	0	0	0.00	99.15	99.90	0.00	0.00	0
+47	31	64	2.16	2944	2419	0.93	663	0	0	0.00	97.86	98.59	0.00	0.00	0
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	232	5.91	3936	2417	1.72	20797	0	0	0.01	94.09	90.41	0.00	0.00	31	76.23	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	57.55	51.38	0.19	3900
+0	0	263	7.90	3330	2419	1.22	1675	0	0	0.00	92.48	92.08	0.00	0.00	0	76.44	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	57.71	51.52	0.19	3900
+0	1	30	1.05	2866	2419	0.62	121	0	0	0.00	98.96	92.08
+4	2	168	5.35	3135	2419	1.51	1546	0	0	0.02	95.03	95.26	0.00	0.00	0
+4	3	4	0.26	1445	2419	0.32	86	0	0	0.00	99.75	95.26
+8	4	505	12.64	3999	2419	1.58	1458	0	0	0.01	87.55	87.92	0.00	0.00	1
+8	5	6	0.34	1691	2419	0.31	88	0	0	0.00	99.67	87.92
+12	6	583	13.63	4277	2419	1.76	1330	0	0	0.03	86.56	83.54	0.00	0.00	3
+12	7	175	4.17	4198	2419	2.48	449	0	0	0.00	95.83	83.55
+16	8	837	19.66	4257	2419	1.58	2016	0	0	0.06	80.62	80.84	0.00	0.00	0
+16	9	6	0.28	1974	2419	0.18	87	0	0	0.00	99.73	80.83
+20	10	1732	38.54	4495	2419	2.23	2630	0	0	0.04	61.54	51.39	0.00	0.00	31
+20	11	566	12.57	4501	2419	2.60	1254	0	0	0.01	87.42	51.39
+24	12	532	13.39	3973	2419	1.35	1609	0	0	0.03	86.88	87.16	0.00	0.00	2
+24	13	4	0.29	1450	2419	0.10	83	0	0	0.00	99.72	87.16
+28	14	764	17.62	4337	2419	1.82	1523	0	0	0.02	82.59	82.90	0.00	0.00	5
+28	15	4	0.25	1404	2419	0.15	86	0	0	0.00	99.76	82.90
+32	16	302	9.34	3230	2419	0.93	1128	0	0	0.00	90.73	91.28	0.00	0.00	0
+33	17	216	6.60	3280	2419	0.76	819	0	0	0.01	93.48	94.04	0.00	0.00	0
+34	18	200	5.74	3491	2419	1.10	336	0	0	0.00	94.30	94.95	0.00	0.00	0
+35	19	159	4.77	3327	2419	0.82	337	0	0	0.00	95.28	95.93	0.00	0.00	0
+36	20	92	3.01	3039	2419	1.04	550	0	0	0.00	97.01	97.73	0.00	0.00	0
+37	21	33	1.21	2753	2419	0.92	240	0	0	0.00	98.82	99.54	0.00	0.00	0
+38	22	66	2.10	3127	2419	0.87	168	0	0	0.00	97.92	98.65	0.00	0.00	0
+39	23	40	1.49	2705	2419	0.79	209	0	0	0.00	98.54	99.26	0.00	0.00	0
+40	24	9	0.48	1794	2419	0.54	106	0	0	0.00	99.53	100.30	0.00	0.00	0
+41	25	32	1.43	2236	2419	0.99	181	0	0	0.00	98.59	99.33	0.00	0.00	0
+42	26	27	1.11	2415	2419	1.08	171	0	0	0.00	98.90	99.65	0.00	0.00	0
+43	27	48	1.60	3034	2419	1.04	108	0	0	0.00	98.42	99.17	0.00	0.00	0
+44	28	10	0.57	1723	2419	0.96	100	0	0	0.00	99.45	100.21	0.00	0.00	0
+45	29	7	0.46	1543	2419	0.83	97	0	0	0.00	99.56	100.32	0.00	0.00	0
+46	30	12	0.63	1916	2419	0.97	113	0	0	0.00	99.39	100.15	0.00	0.00	0
+47	31	8	0.52	1598	2419	0.90	93	0	0	0.00	99.50	100.26	0.00	0.00	0
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	214	5.50	3883	2421	1.68	16658	0	0	0.00	94.66	91.39	0.00	0.00	20	75.63	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	56.46	50.47	0.21	4000
+0	0	168	6.58	2548	2419	0.90	725	0	0	0.00	93.86	93.90	0.00	0.00	0	75.42	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	56.31	50.33	0.20	4000
+0	1	11	0.50	2224	2419	0.49	93	0	0	0.00	99.51	93.90
+4	2	149	5.45	2740	2419	1.27	730	0	0	0.00	94.90	95.20	0.00	0.00	0
+4	3	3	0.23	1394	2419	0.25	76	0	0	0.00	99.78	95.20
+8	4	212	5.85	3627	2419	1.23	776	0	0	0.01	94.37	94.75	0.00	0.00	0
+8	5	5	0.35	1381	2419	0.40	86	0	0	0.00	99.66	94.75
+12	6	354	9.37	3776	2419	1.75	860	0	0	0.01	90.99	88.51	0.00	0.00	2
+12	7	145	3.45	4191	2419	1.48	901	0	0	0.01	96.57	88.51
+16	8	792	18.41	4301	2419	1.85	1232	0	0	0.02	81.86	75.22	0.00	0.00	5
+16	9	417	9.72	4295	2419	1.26	972	0	0	0.00	90.31	75.22
+20	10	1720	37.88	4540	2419	2.28	2130	0	0	0.01	62.25	59.34	0.00	0.00	20
+20	11	230	5.09	4512	2419	1.44	806	0	0	0.00	94.92	59.34
+24	12	843	19.12	4408	2419	2.12	2073	0	0	0.00	81.08	81.38	0.00	0.00	7
+24	13	6	0.28	1948	2419	0.33	82	0	0	0.00	99.73	81.37
+28	14	465	11.51	4040	2419	1.42	1151	0	0	0.00	88.77	89.05	0.00	0.00	1
+28	15	4	0.26	1624	2419	0.28	76	0	0	0.00	99.75	89.05
+32	16	179	5.66	3157	2419	0.94	791	0	0	0.00	94.39	95.01	0.00	0.00	0
+33	17	158	4.73	3333	2419	1.00	385	0	0	0.00	95.32	95.95	0.00	0.00	0
+34	18	167	4.88	3412	2419	0.86	292	0	0	0.00	95.15	95.82	0.00	0.00	0
+35	19	99	3.14	3143	2419	0.85	283	0	0	0.00	96.90	97.57	0.00	0.00	0
+36	20	63	2.05	3077	2419	1.00	197	0	0	0.00	97.98	98.70	0.00	0.00	0
+37	21	93	2.89	3233	2419	1.08	216	0	0	0.01	97.13	97.85	0.00	0.00	0
+38	22	83	2.57	3212	2419	1.14	173	0	0	0.00	97.45	98.18	0.00	0.00	0
+39	23	26	1.12	2291	2419	0.79	307	0	0	0.00	98.93	99.62	0.00	0.00	0
+40	24	97	2.95	3288	2419	1.46	183	0	0	0.00	97.07	97.79	0.00	0.00	0
+41	25	86	2.78	3096	2419	1.09	214	0	0	0.00	97.25	97.96	0.00	0.00	0
+42	26	41	1.48	2784	2419	0.89	169	0	0	0.00	98.55	99.28	0.00	0.00	0
+43	27	94	3.04	3095	2419	1.05	157	0	0	0.00	96.98	97.70	0.00	0.00	0
+44	28	43	1.45	2947	2419	1.37	133	0	0	0.00	98.56	99.32	0.00	0.00	0
+45	29	57	1.90	2982	2419	1.25	171	0	0	0.00	98.13	98.86	0.00	0.00	0
+46	30	15	0.71	2095	2419	0.76	115	0	0	0.00	99.31	100.06	0.00	0.00	0
+47	31	16	0.69	2272	2419	0.87	103	0	0	0.00	99.32	100.08	0.00	0.00	0
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	260	6.49	4007	2418	1.66	22758	0	0	0.01	93.56	89.33	0.00	0.00	27	75.05	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	59.80	53.66	0.20	4000
+0	0	280	8.66	3227	2419	1.46	1292	0	0	0.03	91.76	91.60	0.00	0.00	0	75.12	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	59.85	53.70	0.20	4000
+0	1	20	0.90	2239	2419	0.70	126	0	0	0.00	99.12	91.60
+4	2	312	8.19	3814	2419	1.45	1099	0	0	0.03	92.06	92.43	0.00	0.00	0
+4	3	8	0.36	2104	2419	0.64	93	0	0	0.00	99.65	92.43
+8	4	330	8.56	3860	2419	1.41	1009	0	0	0.00	91.64	92.07	0.00	0.00	0
+8	5	13	0.53	2478	2419	0.68	93	0	0	0.00	99.48	92.06
+12	6	591	14.08	4197	2419	1.76	1380	0	0	0.01	86.07	84.10	0.00	0.00	2
+12	7	178	4.29	4156	2419	1.45	1159	0	0	0.00	95.73	84.10
+16	8	458	11.03	4147	2419	1.81	584	0	0	0.01	89.21	69.78	0.00	0.00	4
+16	9	965	20.96	4605	2419	1.31	3203	0	0	0.10	79.04	69.78
+20	10	2294	50.64	4530	2419	2.18	2743	0	0	0.01	49.41	44.80	0.00	0.00	27
+20	11	338	7.39	4573	2419	1.41	1920	0	0	0.04	92.61	44.81
+24	12	834	19.90	4194	2419	1.74	1822	0	0	0.07	80.37	80.59	0.00	0.00	5
+24	13	8	0.36	2311	2419	0.46	92	0	0	0.00	99.65	80.59
+28	14	554	13.76	4023	2419	1.93	1517	0	0	0.04	86.54	86.73	0.00	0.00	4
+28	15	9	0.43	2159	2419	0.59	96	0	0	0.00	99.59	86.73
+32	16	293	9.07	3225	2419	1.02	741	0	0	0.00	91.00	91.55	0.00	0.00	0
+33	17	227	6.86	3316	2419	0.88	840	0	0	0.01	93.20	93.80	0.00	0.00	0
+34	18	139	4.33	3210	2419	0.89	540	0	0	0.00	95.73	96.35	0.00	0.00	0
+35	19	115	3.65	3143	2419	0.78	345	0	0	0.00	96.40	97.06	0.00	0.00	0
+36	20	64	2.25	2847	2419	0.69	183	0	0	0.00	97.77	98.50	0.00	0.00	0
+37	21	36	1.42	2577	2419	0.61	165	0	0	0.00	98.61	99.34	0.00	0.00	0
+38	22	25	0.94	2658	2419	0.78	160	0	0	0.00	99.08	99.82	0.00	0.00	0
+39	23	28	1.04	2717	2419	0.83	133	0	0	0.00	98.97	99.72	0.00	0.00	0
+40	24	51	1.76	2891	2419	1.44	491	0	0	0.00	98.26	99.01	0.00	0.00	0
+41	25	9	0.49	1903	2419	0.66	93	0	0	0.00	99.53	100.30	0.00	0.00	0
+42	26	34	1.32	2548	2419	1.09	160	0	0	0.00	98.70	99.45	0.00	0.00	0
+43	27	17	0.77	2171	2419	0.70	144	0	0	0.00	99.25	100.00	0.00	0.00	0
+44	28	14	0.60	2286	2419	0.55	103	0	0	0.00	99.42	100.18	0.00	0.00	0
+45	29	27	1.07	2518	2419	0.97	161	0	0	0.00	98.95	99.70	0.00	0.00	0
+46	30	36	1.37	2620	2419	1.21	170	0	0	0.00	98.65	99.40	0.00	0.00	0
+47	31	17	0.77	2154	2419	0.83	101	0	0	0.00	99.25	100.00	0.00	0.00	0
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	5	0.25	1797	2420	0.93	1365	0	0	0.00	99.81	100.39	0.00	0.00	0	99.22	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	15.14	10.86	0.01	4000
+0	0	5	0.34	1384	2419	0.68	28	0	0	0.00	99.74	100.42	0.00	0.00	0	99.13	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	15.12	10.85	0.01	4000
+0	1	1	0.05	1657	2419	0.51	4	0	0	0.00	99.95	100.43
+4	2	3	0.15	2155	2419	0.71	17	0	0	0.00	99.87	100.61	0.00	0.00	0
+4	3	1	0.04	1913	2419	0.42	8	0	0	0.00	99.96	100.61
+8	4	25	1.96	1260	2419	1.40	470	0	0	0.00	98.24	98.76	0.00	0.00	0
+8	5	1	0.05	2185	2419	0.57	11	0	0	0.00	99.95	98.76
+12	6	4	0.24	1488	2419	0.76	43	0	0	0.00	99.82	100.54	0.00	0.00	0
+12	7	0	0.01	1473	2419	0.60	3	0	0	0.00	99.99	100.54
+16	8	7	0.46	1471	2419	0.70	65	0	0	0.00	99.64	100.06	0.00	0.00	0
+16	9	11	0.27	4002	2419	0.87	68	0	0	0.00	99.73	100.06
+20	10	12	0.55	2239	2419	1.59	61	0	0	0.00	99.54	100.22	0.00	0.00	0
+20	11	1	0.03	1946	2419	0.37	7	0	0	0.00	99.97	100.22
+24	12	7	0.31	2180	2419	0.72	23	0	0	0.00	99.73	100.46	0.00	0.00	0
+24	13	1	0.04	1637	2419	0.50	10	0	0	0.00	99.96	100.46
+28	14	8	0.34	2204	2419	1.24	56	0	0	0.00	99.74	100.44	0.00	0.00	0
+28	15	0	0.03	1616	2419	0.38	3	0	0	0.00	99.97	100.45
+32	16	5	0.23	2312	2419	0.63	84	0	0	0.00	99.77	100.55	0.00	0.00	0
+33	17	8	0.67	1237	2419	0.86	103	0	0	0.00	99.34	100.11	0.00	0.00	0
+34	18	2	0.07	2678	2419	0.46	9	0	0	0.00	99.93	100.73	0.00	0.00	0
+35	19	9	0.34	2575	2419	0.63	36	0	0	0.00	99.66	100.45	0.00	0.00	0
+36	20	3	0.14	2123	2419	0.59	13	0	0	0.00	99.86	100.65	0.00	0.00	0
+37	21	6	0.44	1258	2419	0.66	89	0	0	0.00	99.58	100.34	0.00	0.00	0
+38	22	2	0.11	2015	2419	0.49	15	0	0	0.00	99.89	100.68	0.00	0.00	0
+39	23	9	0.53	1746	2419	0.74	101	0	0	0.00	99.48	100.25	0.00	0.00	0
+40	24	1	0.04	1557	2419	0.39	6	0	0	0.00	99.96	100.76	0.00	0.00	0
+41	25	1	0.04	1897	2419	0.36	2	0	0	0.00	99.96	100.76	0.00	0.00	0
+42	26	1	0.04	1651	2419	0.32	2	0	0	0.00	99.96	100.76	0.00	0.00	0
+43	27	1	0.04	1874	2419	0.41	5	0	0	0.00	99.96	100.76	0.00	0.00	0
+44	28	5	0.20	2302	2419	0.57	5	0	0	0.00	99.80	100.59	0.00	0.00	0
+45	29	2	0.08	2669	2419	0.45	9	0	0	0.00	99.92	100.72	0.00	0.00	0
+46	30	0	0.01	1940	2419	0.44	3	0	0	0.00	99.99	100.79	0.00	0.00	0
+47	31	5	0.16	3168	2419	1.13	6	0	0	0.00	99.85	100.64	0.00	0.00	0
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	4	0.18	2027	2419	0.92	1229	0	0	0.00	99.84	100.49	0.00	0.00	0	99.86	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	12.32	8.22	0.00	4000
+0	0	7	0.34	1910	2419	0.80	46	0	0	0.00	99.75	100.44	0.00	0.00	0	99.84	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	12.32	8.22	0.00	4000
+0	1	0	0.02	1602	2419	0.75	9	0	0	0.00	99.98	100.43
+4	2	3	0.27	1110	2419	0.66	65	0	0	0.00	99.82	100.51	0.00	0.00	0
+4	3	0	0.01	2155	2419	0.69	5	0	0	0.00	99.99	100.51
+8	4	16	1.63	1001	2419	1.78	439	0	0	0.00	98.51	99.11	0.00	0.00	0
+8	5	0	0.01	1972	2419	0.54	8	0	0	0.00	99.99	99.12
+12	6	3	0.15	2284	2419	0.93	32	0	0	0.00	99.86	100.62	0.00	0.00	0
+12	7	2	0.06	3186	2419	0.47	27	0	0	0.00	99.94	100.63
+16	8	31	0.81	3807	2419	0.74	58	0	0	0.00	99.27	99.92	0.00	0.00	0
+16	9	2	0.06	3512	2419	0.52	15	0	0	0.00	99.94	99.92
+20	10	11	0.31	3376	2419	0.91	31	0	0	0.00	99.72	100.48	0.00	0.00	0
+20	11	0	0.01	2487	2419	0.54	5	0	0	0.00	99.99	100.48
+24	12	3	0.20	1659	2419	0.50	32	0	0	0.00	99.83	100.58	0.00	0.00	0
+24	13	0	0.01	2178	2419	0.62	6	0	0	0.00	99.99	100.59
+28	14	4	0.17	2220	2419	2.16	26	0	0	0.00	99.86	100.61	0.00	0.00	0
+28	15	0	0.02	1294	2419	0.71	9	0	0	0.00	99.98	100.62
+32	16	5	0.17	2729	2419	0.42	20	0	0	0.00	99.83	100.63	0.00	0.00	0
+33	17	5	0.53	960	2419	1.01	89	0	0	0.00	99.49	100.26	0.00	0.00	0
+34	18	5	0.14	3412	2419	0.81	18	0	0	0.00	99.86	100.66	0.00	0.00	0
+35	19	5	0.17	2873	2419	0.36	14	0	0	0.00	99.84	100.63	0.00	0.00	0
+36	20	0	0.02	1396	2419	0.55	10	0	0	0.00	99.99	100.78	0.00	0.00	0
+37	21	0	0.03	1300	2419	0.50	13	0	0	0.00	99.97	100.77	0.00	0.00	0
+38	22	2	0.06	2553	2419	0.44	20	0	0	0.00	99.94	100.74	0.00	0.00	0
+39	23	3	0.21	1245	2419	0.64	80	0	0	0.00	99.80	100.57	0.00	0.00	0
+40	24	1	0.03	1793	2419	0.34	10	0	0	0.00	99.97	100.76	0.00	0.00	0
+41	25	0	0.02	2011	2419	0.50	10	0	0	0.00	99.99	100.78	0.00	0.00	0
+42	26	1	0.05	1862	2419	0.41	13	0	0	0.00	99.95	100.75	0.00	0.00	0
+43	27	0	0.02	1870	2419	0.61	6	0	0	0.00	99.98	100.78	0.00	0.00	0
+44	28	1	0.03	2401	2419	0.81	3	0	0	0.00	99.97	100.77	0.00	0.00	0
+45	29	2	0.07	2913	2419	0.49	43	0	0	0.00	99.93	100.73	0.00	0.00	0
+46	30	2	0.07	2782	2419	0.55	58	0	0	0.00	99.93	100.72	0.00	0.00	0
+47	31	3	0.10	3510	2419	1.37	9	0	0	0.00	99.90	100.70	0.00	0.00	0
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	2	0.14	1371	2419	1.12	894	0	0	0.00	99.87	100.55	0.00	0.00	0	99.85	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	12.20	8.02	0.00	4000
+0	0	3	0.24	1462	2419	0.68	28	0	0	0.00	99.82	100.53	0.00	0.00	0	99.85	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	12.20	8.02	0.00	4000
+0	1	0	0.03	1070	2419	0.65	7	0	0	0.00	99.97	100.54
+4	2	6	0.49	1276	2419	0.75	121	0	0	0.00	99.67	100.29	0.00	0.00	0
+4	3	0	0.01	2081	2419	0.81	5	0	0	0.00	99.99	100.29
+8	4	15	1.61	956	2419	1.89	430	0	0	0.00	98.52	99.14	0.00	0.00	0
+8	5	0	0.01	1965	2419	0.57	4	0	0	0.00	99.99	99.14
+12	6	7	0.20	3381	2419	0.55	14	0	0	0.00	99.82	100.58	0.00	0.00	0
+12	7	0	0.01	1352	2419	0.59	3	0	0	0.00	99.99	100.58
+16	8	2	0.21	1171	2419	0.69	32	0	0	0.00	99.85	100.57	0.00	0.00	0
+16	9	0	0.02	1334	2419	0.64	3	0	0	0.00	99.98	100.57
+20	10	2	0.16	1493	2419	0.97	18	0	0	0.00	99.87	100.63	0.00	0.00	0
+20	11	0	0.01	1860	2419	0.62	2	0	0	0.00	99.99	100.63
+24	12	2	0.15	1514	2419	0.53	11	0	0	0.00	99.88	100.63	0.00	0.00	0
+24	13	0	0.01	1576	2419	0.61	5	0	0	0.00	99.99	100.63
+28	14	3	0.12	2770	2419	2.34	8	0	0	0.00	99.90	100.66	0.00	0.00	0
+28	15	0	0.02	1339	2419	0.70	3	0	0	0.00	99.98	100.66
+32	16	2	0.15	1454	2419	0.60	37	0	0	0.00	99.86	100.65	0.00	0.00	0
+33	17	5	0.59	906	2419	0.99	86	0	0	0.00	99.43	100.19	0.00	0.00	0
+34	18	1	0.09	1500	2419	0.62	20	0	0	0.00	99.91	100.71	0.00	0.00	0
+35	19	1	0.06	1515	2419	0.66	21	0	0	0.00	99.94	100.73	0.00	0.00	0
+36	20	0	0.02	1048	2419	0.64	4	0	0	0.00	99.98	100.78	0.00	0.00	0
+37	21	1	0.04	1206	2419	0.52	9	0	0	0.00	99.96	100.76	0.00	0.00	0
+38	22	0	0.01	2201	2419	0.52	2	0	0	0.00	99.99	100.79	0.00	0.00	0
+39	23	0	0.01	2088	2419	0.54	3	0	0	0.00	99.99	100.79	0.00	0.00	0
+40	24	0	0.02	2026	2419	0.45	2	0	0	0.00	99.98	100.78	0.00	0.00	0
+41	25	0	0.03	1246	2419	0.62	1	0	0	0.00	99.97	100.77	0.00	0.00	0
+42	26	1	0.04	1951	2419	0.40	3	0	0	0.00	99.96	100.76	0.00	0.00	0
+43	27	1	0.02	3039	2419	0.47	0	0	0	0.00	99.98	100.78	0.00	0.00	0
+44	28	1	0.03	2519	2419	0.65	2	0	0	0.00	99.97	100.76	0.00	0.00	0
+45	29	0	0.01	2035	2419	0.54	2	0	0	0.00	99.99	100.79	0.00	0.00	0
+46	30	0	0.01	2027	2419	0.51	2	0	0	0.00	99.99	100.79	0.00	0.00	0
+47	31	4	0.10	3564	2419	1.39	6	0	0	0.00	99.90	100.69	0.00	0.00	0
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	2	0.13	1409	2419	1.30	838	0	0	0.00	99.89	100.56	0.00	0.00	0	99.77	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	11.90	7.76	0.00	4000
+0	0	2	0.17	1197	2419	0.76	21	0	0	0.00	99.88	100.61	0.00	0.00	0	99.76	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	11.90	7.76	0.00	4000
+0	1	0	0.02	1396	2419	0.90	2	0	0	0.00	99.98	100.61
+4	2	4	0.38	1069	2419	0.71	94	0	0	0.00	99.77	100.39	0.00	0.00	0
+4	3	0	0.01	2679	2419	0.66	5	0	0	0.00	99.99	100.39
+8	4	17	1.67	1028	2419	1.79	452	0	0	0.00	98.50	99.08	0.00	0.00	0
+8	5	1	0.02	3482	2419	0.20	6	0	0	0.00	99.98	99.07
+12	6	10	0.30	3196	2419	1.54	23	0	0	0.00	99.74	100.48	0.00	0.00	0
+12	7	0	0.01	1969	2419	0.51	6	0	0	0.00	99.99	100.48
+16	8	1	0.11	1156	2419	0.50	12	0	0	0.00	99.94	100.66	0.00	0.00	0
+16	9	1	0.04	1366	2419	0.64	11	0	0	0.00	99.96	100.66
+20	10	2	0.17	1359	2419	0.96	20	0	0	0.00	99.87	100.62	0.00	0.00	0
+20	11	0	0.00	3737	2419	0.63	3	0	0	0.00	100.00	100.62
+24	12	2	0.13	1475	2419	0.62	10	0	0	0.00	99.90	100.66	0.00	0.00	0
+24	13	0	0.01	1531	2419	0.70	3	0	0	0.00	99.99	100.66
+28	14	4	0.15	2439	2419	2.21	6	0	0	0.00	99.88	100.64	0.00	0.00	0
+28	15	0	0.01	1694	2419	0.64	5	0	0	0.00	99.99	100.64
+32	16	2	0.09	1901	2419	0.54	28	0	0	0.00	99.92	100.71	0.00	0.00	0
+33	17	5	0.59	896	2419	0.98	95	0	0	0.00	99.43	100.19	0.00	0.00	0
+34	18	1	0.02	3248	2419	0.57	3	0	0	0.00	99.98	100.78	0.00	0.00	0
+35	19	1	0.03	2239	2419	0.62	3	0	0	0.00	99.97	100.77	0.00	0.00	0
+36	20	0	0.01	982	2419	0.75	2	0	0	0.00	99.99	100.78	0.00	0.00	0
+37	21	0	0.02	1627	2419	0.50	1	0	0	0.00	99.99	100.78	0.00	0.00	0
+38	22	0	0.01	2843	2419	0.68	2	0	0	0.00	99.99	100.79	0.00	0.00	0
+39	23	0	0.00	2823	2419	0.72	2	0	0	0.00	100.00	100.79	0.00	0.00	0
+40	24	0	0.02	800	2419	0.70	2	0	0	0.00	99.98	100.78	0.00	0.00	0
+41	25	0	0.01	2335	2419	0.61	2	0	0	0.00	99.99	100.79	0.00	0.00	0
+42	26	0	0.02	1716	2419	0.49	2	0	0	0.00	99.98	100.78	0.00	0.00	0
+43	27	0	0.01	2372	2419	0.71	3	0	0	0.00	99.99	100.79	0.00	0.00	0
+44	28	1	0.03	2408	2419	0.78	3	0	0	0.00	99.97	100.77	0.00	0.00	0
+45	29	0	0.01	2021	2419	0.65	3	0	0	0.00	99.99	100.79	0.00	0.00	0
+46	30	0	0.01	1963	2419	0.64	3	0	0	0.00	99.99	100.79	0.00	0.00	0
+47	31	3	0.09	3594	2419	1.40	5	0	0	0.00	99.91	100.71	0.00	0.00	0
+Core	CPU	Avg_MHz	Busy%	Bzy_MHz	TSC_MHz	IPC	IRQ	NMI	SMI	POLL%	C1ACPI%	CPU%c1	CPU%c6	CPU%c7	CoreThr	GFX%rc6	GFXMHz	GFXAMHz	Pkg%pc2	Pkg%pc3	Pkg%pc6	Pkg%pc8	Pk%pc10	CPU%LPI	SYS%LPI	PkgWatt	CorWatt	GFXWatt	UncMHz
+-	-	13	0.52	2586	2419	0.96	2320	0	0	0.00	99.52	99.85	0.00	0.00	0	94.63	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	20.42	15.74	0.05	4000
+0	0	22	1.07	2051	2419	0.39	234	0	0	0.00	99.19	99.68	0.00	0.00	0	94.66	700	700	0.00	0.00	0.00	0.00	0.00	0.00	0.00	20.42	15.75	0.05	4000
+0	1	0	0.01	2275	2419	0.60	5	0	0	0.00	99.99	99.68
+4	2	29	1.38	2082	2419	0.82	185	0	0	0.00	98.82	99.33	0.00	0.00	0
+4	3	1	0.05	2638	2419	0.63	4	0	0	0.02	99.95	99.33
+8	4	64	2.60	2466	2419	0.84	484	0	0	0.01	97.71	97.37	0.00	0.00	0
+8	5	35	0.76	4686	2419	0.07	521	0	0	0.00	99.26	97.37
+12	6	26	1.17	2200	2419	1.01	182	0	0	0.00	99.01	99.35	0.00	0.00	0
+12	7	4	0.26	1580	2419	0.30	37	0	0	0.00	99.75	99.35
+16	8	33	1.10	2974	2419	0.67	84	0	0	0.03	99.03	99.63	0.00	0.00	0
+16	9	1	0.04	1508	2419	0.54	7	0	0	0.00	99.97	99.63
+20	10	72	2.33	3085	2419	1.66	156	0	0	0.00	97.83	98.40	0.00	0.00	0
+20	11	1	0.02	2121	2419	0.59	7	0	0	0.00	99.98	98.40
+24	12	32	1.19	2703	2419	1.98	75	0	0	0.00	98.91	99.58	0.00	0.00	0
+24	13	0	0.01	2206	2419	0.64	2	0	0	0.00	99.99	99.58
+28	14	28	1.02	2749	2419	0.97	57	0	0	0.00	99.08	99.74	0.00	0.00	0
+28	15	0	0.03	1170	2419	0.73	4	0	0	0.00	99.97	99.74
+32	16	14	0.52	2626	2419	0.62	27	0	0	0.00	99.49	100.27	0.00	0.00	0
+33	17	16	1.05	1578	2419	0.75	132	0	0	0.00	98.98	99.72	0.00	0.00	0
+34	18	11	0.40	2715	2419	0.86	19	0	0	0.00	99.61	100.39	0.00	0.00	0
+35	19	3	0.11	2539	2419	0.70	4	0	0	0.00	99.90	100.68	0.00	0.00	0
+36	20	8	0.35	2387	2419	0.98	12	0	0	0.00	99.66	100.44	0.00	0.00	0
+37	21	10	0.31	3303	2419	0.64	26	0	0	0.00	99.70	100.49	0.00	0.00	0
+38	22	4	0.17	2303	2419	0.83	7	0	0	0.00	99.83	100.63	0.00	0.00	0
+39	23	5	0.20	2273	2419	0.82	16	0	0	0.00	99.80	100.59	0.00	0.00	0
+40	24	1	0.05	2424	2419	0.91	0	0	0	0.00	99.95	100.75	0.00	0.00	0
+41	25	1	0.08	1451	2419	0.76	7	0	0	0.00	99.92	100.71	0.00	0.00	0
+42	26	1	0.06	1847	2419	0.74	3	0	0	0.00	99.94	100.74	0.00	0.00	0
+43	27	1	0.07	1066	2419	0.76	2	0	0	0.00	99.93	100.73	0.00	0.00	0
+44	28	1	0.04	2540	2419	0.59	0	0	0	0.00	99.96	100.76	0.00	0.00	0
+45	29	0	0.01	2276	2419	0.70	2	0	0	0.00	99.99	100.79	0.00	0.00	0
+46	30	1	0.02	2695	2419	0.59	15	0	0	0.00	99.98	100.78	0.00	0.00	0
+47	31	4	0.11	3446	2419	1.33	4	0	0	0.00	99.89	100.69	0.00	0.00	0
+
+===== after snapshot: 2026-10-27T15:36:14+03:00
+Reported power source: ac
+Expected capture: ac
+Kernel: 6.18.57
+Power profile: performance
+Active power services:
+active
+inactive
+inactive
+inactive
+
+--- Battery status ---
+/sys/class/power_supply/BAT0/status: Charging
+/sys/class/power_supply/BAT0/capacity: 96
+/sys/class/power_supply/BAT0/voltage_now: 17439000
+/sys/class/power_supply/BAT0/current_now: 496000
+
+--- Intel P-state and CPU frequency policies ---
+/sys/devices/system/cpu/intel_pstate/status: active
+/sys/devices/system/cpu/intel_pstate/no_turbo: 0
+/sys/devices/system/cpu/intel_pstate/min_perf_pct: 16
+/sys/devices/system/cpu/intel_pstate/max_perf_pct: 100
+/sys/devices/system/cpu/cpufreq/policy0/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy10/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy11/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy12/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy13/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy14/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy15/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy16/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy17/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy18/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy19/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy1/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy20/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy21/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy22/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy23/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy24/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy25/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy26/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy27/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy28/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy29/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy2/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy30/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy31/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy3/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy4/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy5/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy6/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy7/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy8/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy9/scaling_driver: intel_pstate
+/sys/devices/system/cpu/cpufreq/policy0/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy10/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy11/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy12/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy13/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy14/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy15/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy16/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy17/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy18/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy19/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy1/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy20/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy21/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy22/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy23/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy24/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy25/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy26/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy27/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy28/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy29/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy2/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy30/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy31/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy3/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy4/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy5/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy6/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy7/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy8/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy9/scaling_governor: powersave
+/sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy10/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy11/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy12/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy13/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy14/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy15/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy16/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy17/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy18/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy19/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy1/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy20/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy21/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy22/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy23/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy24/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy25/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy26/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy27/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy28/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy29/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy2/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy30/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy31/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy3/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy5/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy7/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy8/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy9/scaling_min_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq: 5200000
+/sys/devices/system/cpu/cpufreq/policy10/scaling_max_freq: 5400000
+/sys/devices/system/cpu/cpufreq/policy11/scaling_max_freq: 5400000
+/sys/devices/system/cpu/cpufreq/policy12/scaling_max_freq: 5200000
+/sys/devices/system/cpu/cpufreq/policy13/scaling_max_freq: 5200000
+/sys/devices/system/cpu/cpufreq/policy14/scaling_max_freq: 5200000
+/sys/devices/system/cpu/cpufreq/policy15/scaling_max_freq: 5200000
+/sys/devices/system/cpu/cpufreq/policy16/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy17/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy18/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy19/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy1/scaling_max_freq: 5200000
+/sys/devices/system/cpu/cpufreq/policy20/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy21/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy22/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy23/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy24/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy25/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy26/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy27/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy28/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy29/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy2/scaling_max_freq: 5200000
+/sys/devices/system/cpu/cpufreq/policy30/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy31/scaling_max_freq: 3900000
+/sys/devices/system/cpu/cpufreq/policy3/scaling_max_freq: 5200000
+/sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq: 5200000
+/sys/devices/system/cpu/cpufreq/policy5/scaling_max_freq: 5200000
+/sys/devices/system/cpu/cpufreq/policy6/scaling_max_freq: 5200000
+/sys/devices/system/cpu/cpufreq/policy7/scaling_max_freq: 5200000
+/sys/devices/system/cpu/cpufreq/policy8/scaling_max_freq: 5400000
+/sys/devices/system/cpu/cpufreq/policy9/scaling_max_freq: 5400000
+/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq: 5047437
+/sys/devices/system/cpu/cpufreq/policy10/scaling_cur_freq: 5099948
+/sys/devices/system/cpu/cpufreq/policy11/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy12/scaling_cur_freq: 1778335
+/sys/devices/system/cpu/cpufreq/policy13/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy14/scaling_cur_freq: 2193535
+/sys/devices/system/cpu/cpufreq/policy15/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy16/scaling_cur_freq: 800757
+/sys/devices/system/cpu/cpufreq/policy17/scaling_cur_freq: 795030
+/sys/devices/system/cpu/cpufreq/policy18/scaling_cur_freq: 3053608
+/sys/devices/system/cpu/cpufreq/policy19/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy1/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy20/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy21/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy22/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy23/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy24/scaling_cur_freq: 800192
+/sys/devices/system/cpu/cpufreq/policy25/scaling_cur_freq: 1669600
+/sys/devices/system/cpu/cpufreq/policy26/scaling_cur_freq: 800183
+/sys/devices/system/cpu/cpufreq/policy27/scaling_cur_freq: 796993
+/sys/devices/system/cpu/cpufreq/policy28/scaling_cur_freq: 3887394
+/sys/devices/system/cpu/cpufreq/policy29/scaling_cur_freq: 927664
+/sys/devices/system/cpu/cpufreq/policy2/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy30/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy31/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy3/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy4/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy5/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy6/scaling_cur_freq: 949583
+/sys/devices/system/cpu/cpufreq/policy7/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy8/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy9/scaling_cur_freq: 800000
+/sys/devices/system/cpu/cpufreq/policy0/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy10/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy11/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy12/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy13/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy14/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy15/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy16/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy17/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy18/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy19/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy1/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy20/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy21/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy22/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy23/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy24/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy25/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy26/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy27/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy28/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy29/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy2/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy30/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy31/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy3/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy4/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy5/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy6/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy7/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy8/energy_performance_preference: performance
+/sys/devices/system/cpu/cpufreq/policy9/energy_performance_preference: performance
+
+--- ACPI platform profile ---
+/sys/firmware/acpi/platform_profile: performance
+/sys/firmware/acpi/platform_profile_choices: low-power balanced performance
+
+--- Intel RAPL limits and energy counters ---
+/sys/class/powercap/intel-rapl:0:0/name: core
+/sys/class/powercap/intel-rapl:0:1/name: uncore
+/sys/class/powercap/intel-rapl:0/name: package-0
+/sys/class/powercap/intel-rapl-mmio:0/name: package-0
+/sys/class/powercap/intel-rapl:0:0/max_energy_range_uj: 262143328850
+/sys/class/powercap/intel-rapl:0:1/max_energy_range_uj: 262143328850
+/sys/class/powercap/intel-rapl:0/max_energy_range_uj: 262143328850
+/sys/class/powercap/intel-rapl-mmio:0/max_energy_range_uj: 262143328850
+/sys/class/powercap/intel-rapl:0:0/constraint_0_name: long_term
+/sys/class/powercap/intel-rapl:0:1/constraint_0_name: long_term
+/sys/class/powercap/intel-rapl:0/constraint_0_name: long_term
+/sys/class/powercap/intel-rapl:0/constraint_1_name: short_term
+/sys/class/powercap/intel-rapl:0/constraint_2_name: peak_power
+/sys/class/powercap/intel-rapl-mmio:0/constraint_0_name: long_term
+/sys/class/powercap/intel-rapl-mmio:0/constraint_1_name: short_term
+/sys/class/powercap/intel-rapl-mmio:0/constraint_2_name: peak_power
+/sys/class/powercap/intel-rapl:0:0/constraint_0_power_limit_uw: 0
+/sys/class/powercap/intel-rapl:0:1/constraint_0_power_limit_uw: 0
+/sys/class/powercap/intel-rapl:0/constraint_0_power_limit_uw: 110000000
+/sys/class/powercap/intel-rapl:0/constraint_1_power_limit_uw: 130000000
+/sys/class/powercap/intel-rapl:0/constraint_2_power_limit_uw: 246000000
+/sys/class/powercap/intel-rapl-mmio:0/constraint_0_power_limit_uw: 110000000
+/sys/class/powercap/intel-rapl-mmio:0/constraint_1_power_limit_uw: 130000000
+/sys/class/powercap/intel-rapl-mmio:0/constraint_2_power_limit_uw: 246000000
+/sys/class/powercap/intel-rapl:0:0/constraint_0_time_window_us: 976
+/sys/class/powercap/intel-rapl:0:1/constraint_0_time_window_us: 976
+/sys/class/powercap/intel-rapl:0/constraint_0_time_window_us: 55967744
+/sys/class/powercap/intel-rapl:0/constraint_1_time_window_us: 2440
+/sys/class/powercap/intel-rapl:0/constraint_2_time_window_us: 
+/sys/class/powercap/intel-rapl-mmio:0/constraint_0_time_window_us: 55967744
+/sys/class/powercap/intel-rapl-mmio:0/constraint_1_time_window_us: 2440
+/sys/class/powercap/intel-rapl-mmio:0/constraint_2_time_window_us: 
+
+--- Intel DPTF processor power-limit interfaces ---
+/sys/bus/pci/devices/0000:00:04.0/power_limits/power_limit_0_max_uw: 45000000
+/sys/bus/pci/devices/0000:00:04.0/power_limits/power_limit_0_min_uw: 35000000
+/sys/bus/pci/devices/0000:00:04.0/power_limits/power_limit_0_step_uw: 1000000
+/sys/bus/pci/devices/0000:00:04.0/power_limits/power_limit_0_tmax_us: 32000000
+/sys/bus/pci/devices/0000:00:04.0/power_limits/power_limit_0_tmin_us: 28000000
+/sys/bus/pci/devices/0000:00:04.0/power_limits/power_limit_1_max_uw: 56250000
+/sys/bus/pci/devices/0000:00:04.0/power_limits/power_limit_1_min_uw: 56250000
+/sys/bus/pci/devices/0000:00:04.0/power_limits/power_limit_1_step_uw: 1000000
+/sys/bus/pci/devices/0000:00:04.0/power_limits/power_limit_1_tmax_us: 0
+/sys/bus/pci/devices/0000:00:04.0/power_limits/power_limit_1_tmin_us: 0
+
+--- Read-only CPU MSR limits (rdmsr output is CPU order) ---
+IA32_HWP_REQUEST 0x774 (all CPUs):
+MSR_CORE_PERF_LIMIT_REASONS 0x64f (all CPUs):
+MSR_PKG_POWER_LIMIT 0x610 (CPU 0):
+rdmsr: open: No such file or directory
+Recorded Speedometer score: 40.0

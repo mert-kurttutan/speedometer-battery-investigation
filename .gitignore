@@ -1,7 +1,3 @@
-# Raw diagnostics can contain hostnames, usernames, boot arguments, and device IDs.
-/captures/raw/
-/captures/redacted/
-/captures/*.log
 /result-runs/
 result-runs/*.csv
 

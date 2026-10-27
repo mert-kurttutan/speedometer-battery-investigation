@@ -22,7 +22,7 @@ Brave's GPU diagnostics showed hardware-accelerated Intel/Mesa rendering on Wayl
 
 ## Latest captures
 
-The full raw captures remain on the original machine under `/tmp/speedometer-power-captures/` and are deliberately not tracked here.
+Raw captures are tracked in `captures/raw/` in this private repository and remain on the original machine under `/tmp/speedometer-power-captures/` as well.
 
 - AC run: `20261027T123545Z-ac.log`, score 40.0.
 - Battery run: `20261027T123634Z-battery.log`, score 4.44.

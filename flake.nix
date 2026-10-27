@@ -15,6 +15,8 @@
           pkgs.nushell
           pkgs.linuxPackages.turbostat
           pkgs.msr-tools
+          pkgs.stress-ng
+          pkgs.util-linux
         ];
       };
     };

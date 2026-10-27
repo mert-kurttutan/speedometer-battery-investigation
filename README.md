@@ -4,16 +4,18 @@ Determine why Speedometer 3.1 runs much slower on battery in NixOS than on batte
 
 ## Current result
 
-The large difference reproduces in Chromium-based Brave and Firefox on Linux, and across Brave Wayland and X11 runs. NixOS reaches approximately the Windows AC result while plugged in. This makes a Linux battery-state performance limit the leading hypothesis; the evidence does not yet identify whether it comes from firmware/EC policy, a kernel interface, CPU throttling reason, or another component.
+The large difference reproduces in Chromium-based Brave and Firefox on Linux, and across Brave Wayland and X11 runs. NixOS reaches approximately the Windows AC result while plugged in. A pinned CPU-only load now also shows a severe battery-specific CPU performance drop on NixOS, so Wayland and browser rendering cannot explain the main slowdown. The enforcement mechanism remains unknown.
 
 The newest controlled capture pair:
 
 | Source | Speedometer 3.1 | Profile | `no_turbo` | `max_perf_pct` | RAPL PL1/PL2 |
 | --- | ---: | --- | ---: | ---: | ---: |
-| NixOS AC | 40.0 | performance | 0 | 100 | 110 W / 130 W |
+| NixOS AC | 42.8 | performance | 0 | 100 | 110 W / 130 W |
 | NixOS battery | 4.44 | performance | 0 | 100 | 110 W / 130 W |
 
-Capture scripts attempted to read MSRs `0x774`, `0x64f`, and `0x610`, but `rdmsr` returned `No such file or directory`; those readings are **not available yet**. The exposed settings above being equal does not prove that the effective hardware limits are equal.
+On a 30-second single-core CPU load pinned to CPU 0, NixOS battery reached 588 MHz / 6.54 W package power / 390 stress-ng ops/s; AC reached 4,997 MHz / 54.37 W / 3,412 ops/s. Both runs had 99.76% CPU busy, performance profiles, turbo enabled, the same HWP request, and the same exposed RAPL limit. The battery run stayed cool at 34°C core / 44°C package. See the raw captures and analysis in [current evidence](docs/current-evidence.md).
+
+MSR readings are now available after loading the `msr` kernel module. The equal HWP and RAPL requests do not explain the large difference in effective clock and package power; the active battery-state limit remains unidentified.
 
 Earlier measurements include NixOS battery scores around 4.4, Windows battery around 15–16, and AC scores around 40–43 on both systems. See [current evidence](docs/current-evidence.md) and [test plan](docs/test-plan.md).
 
@@ -68,6 +70,15 @@ The Linux script samples for 240 seconds by default. Start Speedometer as soon a
    ```
 
 The script verifies the power source through WMI and records the active power plan, AC/DC processor policy, battery state, Intel DTT/IPF service state, CPU frequency/performance-limit counters, and available 3D GPU engine counters. It does not change power settings. Logs are written to `%TEMP%\speedometer-power-captures\`.
+
+For a CPU-only comparison, run the separate pinned-load capture on battery, then AC, with the same Windows power mode:
+
+```nu
+nu scripts/capture-cpu-load-windows.nu battery 30
+nu scripts/capture-cpu-load-windows.nu ac 30
+```
+
+This runs a single-thread CPU load pinned to logical CPU 0 and records per-core and total CPU performance counters, the active power plan, and Intel DTT/IPF service state. It verifies the power source and writes logs to `%TEMP%\speedometer-power-captures\`. The worker uses a small .NET CPU loop, so compare frequency and utilization across power sources; its work rate is not directly comparable to Linux `stress-ng`.
 
 To add the two Windows logs to this repository, copy the generated files into `captures/raw/`, then review and commit them:
 

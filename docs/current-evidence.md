@@ -46,6 +46,19 @@ During the 200-second power-saver battery capture, turbostat recorded 196 packag
 
 The 40-second AC run recorded 39 package intervals: on intervals with more than 1% package busy, mean busy frequency was 4,202 MHz and package power 57.42 W. AC and battery performance-profile runs had the same HWP EPP (`0x00`), maximum-performance requests, exposed PL1/PL2 limits, and `0x19030100` limit-reason value, yet their scores were 42.8 and 4.44. The active frequency/power divergence is clear; the generic bit 8 flag is not the battery-specific explanation. An unexposed battery-state platform or electrical power restriction remains a leading hypothesis, but its exact control source is unknown.
 
+## CPU-only pinned-load comparison
+
+Paired 30-second `stress-ng` matrix-product loads were pinned to logical CPU 0 with the performance profile selected. Power source was verified by sysfs before and after each run:
+
+| Power | Busy frequency | CPU busy | Package power | Core / package temperature | `stress-ng` ops/s |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Battery | 588 MHz | 99.76% | 6.54 W | 34°C / 44°C | 390 |
+| AC | 4,997 MHz | 99.76% | 54.37 W | 93°C / 93°C | 3,412 |
+
+Both runs reported the performance profile, platform profile `performance`, governor `powersave`, turbo enabled, `max_perf_pct=100`, CPU 0 HWP request `0x430b`, MSR `0x64f` value `0x19030100`, and package power limit MSR `0x610` value `0x42841000df8370`. The CPU-only throughput and busy frequency were roughly 8.5 times higher on AC. The battery CPU stayed cool and had no `CoreThr` count; AC reached 93°C and turbostat reported `CoreThr=4345`, so AC thermal behavior should be considered when interpreting its maximum performance. These captures establish that the battery slowdown is below the browser/rendering layer, but do not identify the control enforcing it.
+
+Raw logs: `20261027T175644Z-cpu-load-battery-cpu0.log` and `20261027T174522Z-cpu-load-ac-cpu0.log`.
+
 ## Leading causes to distinguish
 
 1. Firmware/EC or platform battery-state power policy, including limits not represented in the sampled RAPL sysfs constraints.

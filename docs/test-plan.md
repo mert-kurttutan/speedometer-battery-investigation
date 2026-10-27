@@ -46,6 +46,8 @@ Check the Casper WMI `platform_profile` driver and kernel messages. Determine wh
 
 Repeat clean-profile Speedometer tests on Windows battery and AC with the same display configuration and documented performance mode. Record exact browser builds and Windows power mode. During a short CPU-only load, capture effective clocks, package power, temperatures, and throttle indicators using a trusted monitor. Check whether DTT/IPF services are running during the test, not after it.
 
+The paired Windows CPU 0 load captures show a lower processor-performance counter on battery (mean 159) than AC (mean 238) under the Balanced power plan. HWiNFO then measured 3,274 MHz and 11.2 W on battery versus 5,139 MHz and 27.4 W on AC, with CPU 0 at 100% usage on both. The NixOS CPU 0 load measured 588 MHz and 6.54 W on battery versus 4,997 MHz and 54.37 W on AC. The next diagnostic should seek the active NixOS battery limit during the pinned load, because the before/after HWP request, RAPL limit, and generic MSR limit-reason snapshot did not identify it. Keep the different load programs and telemetry methods explicit when comparing the operating systems.
+
 Windows is a useful comparison but not a perfect control: browser builds, drivers, firmware policy, and benchmark environment can differ. Compare repeated distributions and telemetry, not one score.
 
 ## Phase 5: change only a measured cause
@@ -54,5 +56,5 @@ After a specific limit is identified, test one reversible change at a time, star
 
 ## Run ledger
 
-Append rows to `results/run-ledger.csv`; use blank values rather than guessing. Keep detailed raw logs local in `captures/raw/` (ignored by Git). Run `scripts/capture-linux.nu` on NixOS and `scripts/capture-windows.nu` on Windows; share only sanitized output.
+Append rows to `results/run-ledger.csv`; use blank values rather than guessing. Keep new detailed raw logs local in `captures/raw/` and stage only reviewed files for this public repository. Run `scripts/capture-linux.nu` on NixOS and `scripts/capture-windows.nu` on Windows; share only sanitized output.
 

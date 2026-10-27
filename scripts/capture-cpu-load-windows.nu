@@ -8,7 +8,7 @@ def main [expected_source: string, duration: int = 30] {
   if ($expected_source not-in ["ac", "battery"]) {
     error make {msg: "Usage: nu scripts/capture-cpu-load-windows.nu ac|battery [duration-seconds]"}
   }
-  if not ((sys host | get name | str downcase | str contains "windows")) {
+  if not ((sys host | get name | str lowercase | str contains "windows")) {
     error make {msg: "Run this script in Nushell on Windows."}
   }
 
@@ -35,7 +35,7 @@ $workerPath = Join-Path $root "cpu-load-worker-$([guid]::NewGuid().ToString()).p
 $workerScript = @"
 `$p = Get-Process -Id `$PID
 `$p.ProcessorAffinity = [IntPtr]1
-Add-Type -TypeDefinition "using System; public static class CpuBurn { public static volatile double Sink; public static void Run() { double x=1.0; while(true) { x=Math.Sqrt(x+1.000001); if(x>1000.0) x=1.0; Sink=x; } } }"
+Add-Type -TypeDefinition "using System; public static class CpuBurn { public static volatile float Sink; public static void Run() { double x=1.0; while(true) { x=Math.Sqrt(x+1.000001); if(x>1000.0) x=1.0; Sink=(float)x; } } }"
 [CpuBurn]::Run()
 "@
 Set-Content -LiteralPath $workerPath -Value $workerScript -Encoding ASCII
@@ -83,6 +83,8 @@ try {
   let log = ($capture_dir | path join $"($stamp)-cpu-load-windows-($expected_source).log")
   $output | save $log
   if $result.exit_code != 0 {
+    print $output
+    print $"Capture failed; details saved to ($log)."
     error make {msg: $"Windows capture failed (exit ($result.exit_code)); output saved to ($log)."}
   }
   print $output

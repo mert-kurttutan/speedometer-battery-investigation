@@ -6,6 +6,8 @@ Determine why Speedometer 3.1 runs much slower on battery in NixOS than on batte
 
 The large difference reproduces in Chromium-based Brave and Firefox on Linux, and across Brave Wayland and X11 runs. NixOS reaches approximately the Windows AC result while plugged in. A pinned CPU-only load now also shows a severe battery-specific CPU performance drop on NixOS, so Wayland and browser rendering cannot explain the main slowdown. The enforcement mechanism remains unknown.
 
+The diagnostic question is why this laptop scores substantially better on Windows battery than on NixOS battery. Compare each operating system with its own AC baseline under a fixed selected mode, then compare effective clocks, package power, and active limit or policy evidence across systems. The names of Windows and NixOS power profiles do not establish equivalent firmware behavior.
+
 The newest controlled capture pair:
 
 | Source | Speedometer 3.1 | Profile | `no_turbo` | `max_perf_pct` | RAPL PL1/PL2 |
@@ -78,19 +80,20 @@ nu scripts/capture-cpu-load-windows.nu battery 30
 nu scripts/capture-cpu-load-windows.nu ac 30
 ```
 
-This runs a single-thread CPU load pinned to logical CPU 0 and records per-core and total CPU performance counters, the active power plan, and Intel DTT/IPF service state. It verifies the power source and writes logs to `%TEMP%\speedometer-power-captures\`. The worker uses a small .NET CPU loop, so compare frequency and utilization across power sources; its work rate is not directly comparable to Linux `stress-ng`.
+This runs a single-thread CPU load pinned to logical CPU 0 and records per-core and total CPU performance counters, the active power plan, and Intel DTT/IPF service state. It verifies the power source and writes logs to `%TEMP%\speedometer-power-captures\`. The worker uses a small .NET CPU loop, so its work rate is not directly comparable to Linux `stress-ng`.
 
-To add the two Windows logs to this repository, copy the generated files into `captures/raw/`, then review and commit them:
+The Windows script completed paired 30-second runs on 2026-10-27. Its CPU 0 performance counter averaged 159 on battery and 238 on AC. The frequency field reported only 1466 or 2200 MHz in both runs, so do not treat it as a reliable effective-clock reading; see [current evidence](docs/current-evidence.md). The script does not measure package power or temperature.
+
+A later paired HWiNFO sensor capture under the same pinned Windows CPU load found 100% core usage on both sources: about 3,274 MHz effective clock and 11.2 W package power on battery, versus 5,139 MHz and 27.4 W on AC. NixOS battery reached only 588 MHz under its pinned CPU load. The load programs differ, and the selected Windows power mode was not separately recorded; the cause of the larger NixOS battery limit is still unresolved.
+
+To preserve Windows logs locally, copy the generated files into `captures/raw/`. This repository is public, so review and sanitize captures before any publication. The summarized measurements are recorded in `results/run-ledger.csv` and `docs/current-evidence.md`.
 
 ```nu
 cp $'($env.TEMP)\speedometer-power-captures\<battery-log-name>.log' captures/raw/
 cp $'($env.TEMP)\speedometer-power-captures\<ac-log-name>.log' captures/raw/
-git add captures/raw
-git commit -m 'Add Windows AC and battery captures'
-git push
 ```
 
-Replace the placeholder names with the actual timestamped filenames. Git authentication is required to push; Git for Windows includes Git Credential Manager, so the GitHub CLI is not needed.
+Replace the placeholder names with the actual timestamped filenames. Keep the copied raw files local unless they have been reviewed for public release.
 
 To troubleshoot missing MSR devices on NixOS, check `ls -l /dev/cpu/0/msr` and `lsmod | rg '^msr'`; if the kernel supports the module, a temporary `sudo modprobe msr` may create the device. Do not enable persistent module settings or write any MSR as part of diagnosis.
 

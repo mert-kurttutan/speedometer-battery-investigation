@@ -39,7 +39,7 @@ def main [expected_source: string, duration: int = 240] {
   if ($expected_source not-in ["ac", "battery"]) {
     error make {msg: "Usage: nu scripts/capture-windows.nu ac|battery [duration-seconds]"}
   }
-  let host_name = (sys host | get name | str downcase)
+  let host_name = (sys host | get name | str lowercase)
   if not ($host_name | str contains "windows") {
     error make {msg: "Run this script in Nushell on Windows."}
   }

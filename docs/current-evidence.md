@@ -18,14 +18,18 @@
 
 Additional runs: Brave Wayland on NixOS battery about 4.4; Brave X11 about 4.11; Firefox about 3.9. A later NixOS performance-profile capture gave AC 40.0 and battery 4.44.
 
+New Windows captures on 2026-10-27 used the Balanced power plan and scored 14.5 on battery and 41.9 on AC. The 100-second battery capture contained about 30 seconds of benchmark activity; the 25-second AC capture contained about 12 seconds, with activity falling toward idle afterward. The operator confirmed that the AC capture covered the full test. Both captures verified their power source, showed a 2560x1600 display at 165 Hz, and found `dptftcs` and `ipfsvc` running. The selected Windows power mode and exact browser build were not recorded. The average Windows CPU performance counter during active samples was about 71 on battery versus 207 on AC; this counter is not a direct CPU clock reading and does not identify a throttle cause. The `PerformanceLimitFlags` value was 2 in both captures and has not been decoded. The Balanced plan had a 100% maximum processor state for both AC and battery; its cooling policy was Active on AC and Passive on battery.
+
 Brave's GPU diagnostics showed hardware-accelerated Intel/Mesa rendering on Wayland. That makes software GPU rendering a weak explanation, but the diagnostic does not rule out compositor, graphics-driver, or browser differences. Firefox showing the same battery symptom makes a Brave-only issue unlikely.
 
 ## Latest captures
 
-Raw captures are tracked in `captures/raw/` in this public repository and remain on the original machine under `/tmp/speedometer-power-captures/` as well.
+Earlier NixOS raw captures are tracked in `captures/raw/` in this public repository and remain on the original machine under `/tmp/speedometer-power-captures/` as well. New Windows raw captures remain local pending review for public release; their summarized measurements are below.
 
 - AC run: `20261027T171317Z-ac.log`, score 42.8; the earlier AC run scored 40.0.
 - Battery run: `20261027T123634Z-battery.log`, score 4.44.
+- Windows battery run: `20261027T133035Z-windows-battery.log`, score 14.5.
+- Windows AC run: `20261027T133402Z-windows-ac.log`, score 41.9.
 - Both: performance profile; `power-profiles-daemon` active; TLP, auto-cpufreq, and thermald inactive; Intel P-state active; turbo enabled (`no_turbo=0`); `max_perf_pct=100`; RAPL package PL1=110 W, PL2=130 W, constraint 2=246 W; MMIO PL1=110 W.
 - Both captures reported the same ACPI platform profile (`performance`) and exposed DPTF processor power-limit bounds.
 - The attempted MSR reads were empty and followed by `rdmsr: open: No such file or directory`. No MSR throttle reason can be inferred from these captures.
@@ -58,6 +62,30 @@ Paired 30-second `stress-ng` matrix-product loads were pinned to logical CPU 0 w
 Both runs reported the performance profile, platform profile `performance`, governor `powersave`, turbo enabled, `max_perf_pct=100`, CPU 0 HWP request `0x430b`, MSR `0x64f` value `0x19030100`, and package power limit MSR `0x610` value `0x42841000df8370`. The CPU-only throughput and busy frequency were roughly 8.5 times higher on AC. The battery CPU stayed cool and had no `CoreThr` count; AC reached 93°C and turbostat reported `CoreThr=4345`, so AC thermal behavior should be considered when interpreting its maximum performance. These captures establish that the battery slowdown is below the browser/rendering layer, but do not identify the control enforcing it.
 
 Raw logs: `20261027T175644Z-cpu-load-battery-cpu0.log` and `20261027T174522Z-cpu-load-ac-cpu0.log`.
+
+## Windows CPU-only pinned-load comparison
+
+Paired 30-second .NET CPU-loop runs pinned to logical CPU 0 were captured under the Balanced power plan. WMI verified battery and AC respectively before each run, and `dptftcs` and `ipfsvc` were running in both. Each log contains 23 samples.
+
+| Power | Mean CPU 0 performance counter | Mean CPU 0 utility counter | Mean total CPU utility counter |
+| --- | ---: | ---: | ---: |
+| Battery | 158.9 | 158.8 | 5.3 |
+| AC | 238.1 | 238.2 | 9.0 |
+
+The CPU 0 performance counter was about 1.50 times higher on AC. Windows processor utility can exceed 100 because it scales work by processor performance state; these are not percentages of elapsed time busy. The logged `ProcessorFrequency` field alternated between 1466 and 2200 MHz on both power sources and was lower on average on AC, contrary to the performance counter. It should not be interpreted here as an effective clock reading. The script did not capture package watts, temperature, time-based CPU busy, or a comparable throughput rate. The selected Windows power mode was not recorded separately from the active Balanced plan. These Windows counters support a smaller battery-versus-AC performance change than the Linux `stress-ng` result, but the workloads and measurement methods differ, so their ratios are not directly comparable. The cause of the NixOS battery limit remains unknown.
+
+Raw logs: `20261027T152707Z-cpu-load-windows-battery.log` and `20261027T152853Z-cpu-load-windows-ac.log`. Earlier script attempts exited before sampling because the .NET worker used an invalid `volatile double` declaration; the local script now uses `volatile float` and completed both runs.
+
+Paired HWiNFO sensor logs were then recorded during another 30-second Windows CPU 0 load on each power source. The steady intervals below omit the first sensor sample after the CPU-load script began. Each interval has 14 samples, and HWiNFO reports P-core 0 thread 0 at 100% usage in every sample.
+
+| Windows source | P-core 0 thread 0 effective clock | CPU package power | Package temperature | Core 0 / package thermal and power-limit flags |
+| --- | ---: | ---: | ---: | --- |
+| Battery | 3,274 MHz | 11.2 W | 47.6 C | No |
+| AC | 5,139 MHz | 27.4 W | 57.6 C | No |
+
+Windows battery retained about 64% of its AC effective clock in this pinned load; the NixOS `stress-ng` battery run retained about 12% of its AC busy frequency. Both operating systems show a battery-state reduction, but the NixOS frequency collapse is much more severe. The Windows and NixOS load programs and telemetry differ, so package-power and throughput ratios should not be directly equated. These measurements do not identify whether the cross-OS gap comes from Windows power mode, OS policy integration, firmware/EC behavior, or another battery-state control. The selected Windows power mode remains unrecorded separately from the Balanced plan.
+
+The HWiNFO CSV files remain local at `C:\Program Files\HWiNFO64\ac-log.csv` and `battery-log.csv`. The matching CPU-load captures are `20261027T154123Z-cpu-load-windows-ac.log` and `20261027T154450Z-cpu-load-windows-battery.log` in `captures/raw/`.
 
 ## Leading causes to distinguish
 

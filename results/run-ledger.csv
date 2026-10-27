@@ -1,3 +1,5 @@
 date,power_source,profile,os,kernel,browser,browser_version,session,gpu,display,score,notes
 2026-10-27,ac,performance,NixOS,6.18.57,Brave,1.97.59 Chromium 155.0.8059.85,Wayland,Intel UHD,unknown,40.0,"Capture: 20261027T123545Z-ac.log; MSR reads failed because /dev/cpu/*/msr was unavailable; RAPL PL1/PL2 110/130 W"
 2026-10-27,battery,performance,NixOS,6.18.57,Brave,1.97.59 Chromium 155.0.8059.85,Wayland,Intel UHD,unknown,4.44,"Capture: 20261027T123634Z-battery.log; MSR reads failed because /dev/cpu/*/msr was unavailable; RAPL PL1/PL2 110/130 W"
+2026-10-27,battery,power-saver,NixOS,6.18.57,unknown,unknown,unknown,unknown,unknown,4.37,"Capture: 20261027T170343Z-battery.log; HWP EPP 255; MSR 0x64f current bit 8 Other set; about 7.5 W package power during active intervals"
+2026-10-27,battery,performance,NixOS,6.18.57,unknown,unknown,unknown,unknown,unknown,4.44,"Capture: 20261027T170722Z-battery.log; HWP EPP 0; MSR 0x64f current bit 8 Other set; about 7.8 W package power during active intervals"

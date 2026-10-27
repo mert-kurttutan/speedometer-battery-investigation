@@ -85,5 +85,5 @@ To troubleshoot missing MSR devices on NixOS, check `ls -l /dev/cpu/0/msr` and `
 
 ## Cross-machine use
 
-This directory is pushed to a private GitHub repository. Clone it on another computer with `git` and authenticate that computer to GitHub. Codex CLI can then be started from the cloned directory; it does not require `gh` if Git authentication is already configured.
+This directory is pushed to a public GitHub repository. Clone it on another computer with `git`; Codex CLI can then be started from the cloned directory without `gh`.
 

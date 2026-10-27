@@ -19,16 +19,18 @@ Earlier measurements include NixOS battery scores around 4.4, Windows battery ar
 
 ## Run the capture
 
-From this repository on NixOS, with AC or battery as indicated:
+The capture scripts use Nushell on both operating systems. On NixOS, enter the pinned development environment and run:
 
 ```sh
-nix develop -c ./scripts/capture-speedometer-power.sh ac
-nix develop -c ./scripts/capture-speedometer-power.sh battery
+nix develop -c nu scripts/capture-linux.nu ac
+nix develop -c nu scripts/capture-linux.nu battery
 ```
 
-Run the script immediately before starting Speedometer. Press Ctrl-C after the benchmark finishes, then enter the displayed score. Logs default to `/tmp/speedometer-power-captures/` and are intentionally excluded from Git.
+The Linux script samples for 240 seconds by default. Start Speedometer as soon as it says to. Set a different duration as the third argument. Logs default to `/tmp/speedometer-power-captures/` and are intentionally excluded from Git.
 
-The current script requires `turbostat` and `sudo`. The flake also provides `rdmsr`. To troubleshoot the missing MSR device, check `ls -l /dev/cpu/0/msr` and `lsmod | rg '^msr'`; if the kernel supports the module, a temporary `sudo modprobe msr` may create the device. Do not enable any persistent module setting or write any MSR as part of diagnosis.
+On Windows, install Nushell, clone this repo, open Nushell in the repo, and run `nu scripts/capture-windows.nu battery` or `nu scripts/capture-windows.nu ac`. Add a duration in seconds to change the default: `nu scripts/capture-windows.nu battery 300`. The Windows script verifies power source from WMI, records powercfg AC/DC policy, battery state, DTT/IPF service state, CPU frequency/performance-limit counters, and available 3D GPU engine counters while Speedometer runs. It does not change power settings.
+
+To troubleshoot missing MSR devices on NixOS, check `ls -l /dev/cpu/0/msr` and `lsmod | rg '^msr'`; if the kernel supports the module, a temporary `sudo modprobe msr` may create the device. Do not enable persistent module settings or write any MSR as part of diagnosis.
 
 ## Cross-machine use
 

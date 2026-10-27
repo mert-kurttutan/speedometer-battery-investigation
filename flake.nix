@@ -12,6 +12,7 @@
     {
       devShells.${system}.default = pkgs.mkShell {
         packages = [
+          pkgs.nushell
           pkgs.linuxPackages.turbostat
           pkgs.msr-tools
         ];

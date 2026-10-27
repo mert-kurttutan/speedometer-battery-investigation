@@ -2,5 +2,6 @@
 /captures/raw/
 /captures/redacted/
 /captures/*.log
+/result-runs/
 result-runs/*.csv
 

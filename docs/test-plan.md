@@ -54,5 +54,5 @@ After a specific limit is identified, test one reversible change at a time, star
 
 ## Run ledger
 
-Append rows to `results/run-ledger.csv`; use blank values rather than guessing. Keep detailed raw logs local in `captures/raw/` (ignored by Git). Share only sanitized output.
+Append rows to `results/run-ledger.csv`; use blank values rather than guessing. Keep detailed raw logs local in `captures/raw/` (ignored by Git). Run `scripts/capture-linux.nu` on NixOS and `scripts/capture-windows.nu` on Windows; share only sanitized output.
 

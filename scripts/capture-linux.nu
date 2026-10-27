@@ -1,7 +1,7 @@
 #!/usr/bin/env nu
 
 def detect-power-source [] {
-  for f in (glob /sys/class/power_supply/*/type) {
+  for f in (glob --follow-symlinks '/sys/class/power_supply/*/type') {
     let kind = (open $f | str trim)
     if $kind == "Mains" {
       let online = ($f | path dirname | path join online)
@@ -10,7 +10,7 @@ def detect-power-source [] {
       }
     }
   }
-  for f in (glob /sys/class/power_supply/*/status) {
+  for f in (glob --follow-symlinks '/sys/class/power_supply/*/status') {
     if (try { (open $f | str trim) == "Discharging" } catch { false }) {
       return "battery"
     }
@@ -19,7 +19,7 @@ def detect-power-source [] {
 }
 
 def read-sysfs [pattern: string] {
-  glob $pattern
+  glob --follow-symlinks $pattern
   | each {|f| try { $"($f): ((open $f | str trim))" } catch { "" } }
   | where {|line| $line != "" }
   | str join "\n"

@@ -18,9 +18,13 @@ def detect-power-source [] {
   "unknown"
 }
 
-def read-sysfs [pattern: string] {
-  glob --follow-symlinks $pattern
-  | each {|f| try { $"($f): ((open $f | str trim))" } catch { "" } }
+def read-sysfs [patterns: list<string>] {
+  $patterns
+  | each {|pattern|
+      glob --follow-symlinks $pattern
+      | each {|f| try { $"($f): ((open $f | str trim))" } catch { "" } }
+    }
+  | flatten
   | where {|line| $line != "" }
   | str join "\n"
 }
@@ -44,24 +48,24 @@ def capture-snapshot [file: string, label: string] {
 Reported power source: (detect-power-source)
 Kernel: (sys host | get kernel_version)
 Power profile: (($profile.stdout | str trim))
-Power services (power-profiles-daemon, tlp, auto-cpufreq, thermald):
+Power services - power-profiles-daemon, tlp, auto-cpufreq, thermald:
 (([$services.stdout, $services.stderr] | str join "\n" | str trim))
 
 --- Battery ---
-(read-sysfs '/sys/class/power_supply/*/{status,capacity,voltage_now,current_now,power_now}')
+(read-sysfs ['/sys/class/power_supply/*/status' '/sys/class/power_supply/*/capacity' '/sys/class/power_supply/*/voltage_now' '/sys/class/power_supply/*/current_now' '/sys/class/power_supply/*/power_now'])
 
 --- Intel P-state / cpufreq ---
-(read-sysfs '/sys/devices/system/cpu/intel_pstate/{status,no_turbo,min_perf_pct,max_perf_pct}')
-(read-sysfs '/sys/devices/system/cpu/cpufreq/policy*/{scaling_driver,scaling_governor,scaling_min_freq,scaling_max_freq,energy_performance_preference}')
+(read-sysfs ['/sys/devices/system/cpu/intel_pstate/status' '/sys/devices/system/cpu/intel_pstate/no_turbo' '/sys/devices/system/cpu/intel_pstate/min_perf_pct' '/sys/devices/system/cpu/intel_pstate/max_perf_pct'])
+(read-sysfs ['/sys/devices/system/cpu/cpufreq/policy*/scaling_driver' '/sys/devices/system/cpu/cpufreq/policy*/scaling_governor' '/sys/devices/system/cpu/cpufreq/policy*/scaling_min_freq' '/sys/devices/system/cpu/cpufreq/policy*/scaling_max_freq' '/sys/devices/system/cpu/cpufreq/policy*/energy_performance_preference'])
 
 --- ACPI platform profile ---
-(read-sysfs '/sys/firmware/acpi/platform_profile{,_choices}')
+(read-sysfs ['/sys/firmware/acpi/platform_profile' '/sys/firmware/acpi/platform_profile_choices'])
 
 --- RAPL power limits and energy ---
-(read-sysfs '/sys/class/powercap/intel-rapl*/{name,energy_uj,max_energy_range_uj,constraint_*_name,constraint_*_power_limit_uw,constraint_*_time_window_us}')
+(read-sysfs ['/sys/class/powercap/intel-rapl*/name' '/sys/class/powercap/intel-rapl*/energy_uj' '/sys/class/powercap/intel-rapl*/max_energy_range_uj' '/sys/class/powercap/intel-rapl*/constraint_*_name' '/sys/class/powercap/intel-rapl*/constraint_*_power_limit_uw' '/sys/class/powercap/intel-rapl*/constraint_*_time_window_us'])
 
 --- DPTF processor power-limit interface ---
-(read-sysfs '/sys/bus/pci/devices/*/power_limits/*')
+(read-sysfs ['/sys/bus/pci/devices/*/power_limits/*'])
 
 --- Read-only MSRs ---
 ($msr)

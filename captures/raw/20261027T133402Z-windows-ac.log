@@ -1,0 +1,220 @@
+Expected power source: ac
+Capture duration: 25 seconds
+
+--- before Windows snapshot ---
+Timestamp: 2026-10-27T13:34:02.5570171+03:00
+Computer: OGUZ-PC
+Windows: Microsoft Windows 11 Home Single Language / 10.0.26100
+Power source and battery:
+
+
+PowerOnline       : True
+Charging          : False
+Discharging       : False
+RemainingCapacity : 54416
+
+
+
+
+
+Name                     : Primary
+BatteryStatus            : 2
+EstimatedChargeRemaining : 95
+DesignCapacity           : 
+FullChargeCapacity       : 
+
+
+
+Active power scheme:
+Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced)AC/DC processor power policy:
+Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced)
+  GUID Alias: SCHEME_BALANCED
+  Subgroup GUID: 54533251-82be-4824-96c1-47b60b740d00  (Processor power management)
+    GUID Alias: SUB_PROCESSOR
+    Power Setting GUID: 893dee8e-2bef-41e0-89c6-b55d0929964c  (Minimum processor state)
+      GUID Alias: PROCTHROTTLEMIN
+      Minimum Possible Setting: 0x00000000
+      Maximum Possible Setting: 0x00000064
+      Possible Settings increment: 0x00000001
+      Possible Settings units: %
+    Current AC Power Setting Index: 0x00000005
+    Current DC Power Setting Index: 0x00000005
+
+    Power Setting GUID: 94d3a615-a899-4ac5-ae2b-e4d8f634367f  (System cooling policy)
+      GUID Alias: SYSCOOLPOL
+      Possible Setting Index: 000
+      Possible Setting Friendly Name: Passive
+      Possible Setting Index: 001
+      Possible Setting Friendly Name: Active
+    Current AC Power Setting Index: 0x00000001
+    Current DC Power Setting Index: 0x00000000
+
+    Power Setting GUID: bc5038f7-23e0-4960-96da-33abaf5935ec  (Maximum processor state)
+      GUID Alias: PROCTHROTTLEMAX
+      Minimum Possible Setting: 0x00000000
+      Maximum Possible Setting: 0x00000064
+      Possible Settings increment: 0x00000001
+      Possible Settings units: %
+    Current AC Power Setting Index: 0x00000064
+    Current DC Power Setting Index: 0x00000064
+
+Available power plans:
+
+Existing Power Schemes (* Active)
+-----------------------------------
+Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced) *
+Intel DTT/IPF services:
+
+Name     Status StartType
+----     ------ ---------
+dptftcs Running Automatic
+ipfsvc  Running Automatic
+
+
+Processor:
+
+
+Name                      : 13th Gen Intel(R) Core(TM) i9-13900HX
+NumberOfCores             : 24
+NumberOfLogicalProcessors : 32
+CurrentClockSpeed         : 2200
+MaxClockSpeed             : 2200
+
+
+
+GPU adapters:
+
+
+Name                        : NVIDIA GeForce RTX 4070 Laptop GPU
+DriverVersion               : 32.0.15.7270
+CurrentHorizontalResolution : 
+CurrentVerticalResolution   : 
+CurrentRefreshRate          : 
+
+Name                        : Intel(R) UHD Graphics
+DriverVersion               : 31.0.101.3688
+CurrentHorizontalResolution : 2560
+CurrentVerticalResolution   : 1600
+CurrentRefreshRate          : 165
+
+Exit code: 0
+Timestamp,CPUUtility,CPUPerformance,CPUFrequencyMHz,PercentMaxFrequency,PerformanceLimitFlags,GPU3DEngineUtilizationSum
+
+--- 1-second CPU/GPU performance samples ---
+"2026-10-27T13:34:04.6536791+03:00","15","216","1789","58","2","21"
+"2026-10-27T13:34:06.4117163+03:00","19","213","1783","63","2","24"
+"2026-10-27T13:34:08.0661427+03:00","16","212","1832","64","2","23"
+"2026-10-27T13:34:09.7209953+03:00","13","194","1819","57","2","19"
+"2026-10-27T13:34:11.3602027+03:00","17","216","1855","72","2","22"
+"2026-10-27T13:34:13.0469976+03:00","15","191","1826","60","2","17"
+"2026-10-27T13:34:14.6890304+03:00","14","207","1818","57","2","18"
+"2026-10-27T13:34:16.3662333+03:00","18","204","1829","64","2","10"
+"2026-10-27T13:34:18.0429719+03:00","0","94","1783","47","2","0"
+"2026-10-27T13:34:19.7380841+03:00","1","67","1708","45","2","0"
+"2026-10-27T13:34:21.4582732+03:00","0","88","1731","44","2","0"
+"2026-10-27T13:34:23.1537997+03:00","2","53","1711","41","2","0"
+"2026-10-27T13:34:24.8146777+03:00","0","65","1754","56","2","0"
+"2026-10-27T13:34:26.4836661+03:00","2","56","1708","41","2","0"
+"2026-10-27T13:34:28.1597713+03:00","0","59","1685","45","2","0"
+
+Exit code: 0
+
+--- after Windows snapshot ---
+Timestamp: 2026-10-27T13:34:30.1146507+03:00
+Computer: OGUZ-PC
+Windows: Microsoft Windows 11 Home Single Language / 10.0.26100
+Power source and battery:
+
+
+PowerOnline       : True
+Charging          : False
+Discharging       : False
+RemainingCapacity : 54416
+
+
+
+
+
+Name                     : Primary
+BatteryStatus            : 2
+EstimatedChargeRemaining : 95
+DesignCapacity           : 
+FullChargeCapacity       : 
+
+
+
+Active power scheme:
+Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced)AC/DC processor power policy:
+Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced)
+  GUID Alias: SCHEME_BALANCED
+  Subgroup GUID: 54533251-82be-4824-96c1-47b60b740d00  (Processor power management)
+    GUID Alias: SUB_PROCESSOR
+    Power Setting GUID: 893dee8e-2bef-41e0-89c6-b55d0929964c  (Minimum processor state)
+      GUID Alias: PROCTHROTTLEMIN
+      Minimum Possible Setting: 0x00000000
+      Maximum Possible Setting: 0x00000064
+      Possible Settings increment: 0x00000001
+      Possible Settings units: %
+    Current AC Power Setting Index: 0x00000005
+    Current DC Power Setting Index: 0x00000005
+
+    Power Setting GUID: 94d3a615-a899-4ac5-ae2b-e4d8f634367f  (System cooling policy)
+      GUID Alias: SYSCOOLPOL
+      Possible Setting Index: 000
+      Possible Setting Friendly Name: Passive
+      Possible Setting Index: 001
+      Possible Setting Friendly Name: Active
+    Current AC Power Setting Index: 0x00000001
+    Current DC Power Setting Index: 0x00000000
+
+    Power Setting GUID: bc5038f7-23e0-4960-96da-33abaf5935ec  (Maximum processor state)
+      GUID Alias: PROCTHROTTLEMAX
+      Minimum Possible Setting: 0x00000000
+      Maximum Possible Setting: 0x00000064
+      Possible Settings increment: 0x00000001
+      Possible Settings units: %
+    Current AC Power Setting Index: 0x00000064
+    Current DC Power Setting Index: 0x00000064
+
+Available power plans:
+
+Existing Power Schemes (* Active)
+-----------------------------------
+Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced) *
+Intel DTT/IPF services:
+
+Name     Status StartType
+----     ------ ---------
+dptftcs Running Automatic
+ipfsvc  Running Automatic
+
+
+Processor:
+
+
+Name                      : 13th Gen Intel(R) Core(TM) i9-13900HX
+NumberOfCores             : 24
+NumberOfLogicalProcessors : 32
+CurrentClockSpeed         : 2200
+MaxClockSpeed             : 2200
+
+
+
+GPU adapters:
+
+
+Name                        : NVIDIA GeForce RTX 4070 Laptop GPU
+DriverVersion               : 32.0.15.7270
+CurrentHorizontalResolution : 
+CurrentVerticalResolution   : 
+CurrentRefreshRate          : 
+
+Name                        : Intel(R) UHD Graphics
+DriverVersion               : 31.0.101.3688
+CurrentHorizontalResolution : 2560
+CurrentVerticalResolution   : 1600
+CurrentRefreshRate          : 165
+
+Exit code: 0
+
+Recorded Speedometer score: 41.9

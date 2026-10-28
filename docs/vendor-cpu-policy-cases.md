@@ -1,0 +1,43 @@
+# Windows–Linux CPU battery performance: related vendor cases
+
+Reviewed 2026-10-27. This is a literature review for the Casper Excalibur G911 investigation, not a diagnosis of its firmware. Sources are first-hand reports, code, and official documentation. An issue being closed does not by itself prove every affected model was fixed.
+
+## Corrected starting point: the Casper driver is installed
+
+The installed [CECC Linux `casper-wmi` driver](https://github.com/mert-kurttutan/cecc-linux/blob/main/casper-wmi/casper-wmi.c) explicitly lists the Excalibur G911 and Raptor Lake. Its `platform_profile` getter queries the firmware's `CASPER_POWERPLAN` value. Thus `performance` on both power sources is a real firmware profile readback. The driver is not missing. That readback does not measure all battery-dependent limits or prove the CPU can attain the requested performance.
+
+## Measurements from this machine
+
+| Test | Battery | AC | Interpretation |
+| --- | ---: | ---: | --- |
+| NixOS pinned CPU 0, `stress-ng` | 588 MHz busy frequency; 6.54 W package; 390 ops/s | 4,997 MHz; 54.37 W; 3,412 ops/s | CPU 99.76% busy both runs. Battery slowdown is below browser/graphics layers. |
+| Windows pinned CPU 0, .NET worker plus HWiNFO | ~3,274 MHz effective P-core 0; ~11.2 W package | ~5,139 MHz; ~27.4 W | Windows also reduces battery performance, but much less in this test. Windows and Linux workloads differ, so absolute numbers and ratios are not directly comparable. |
+
+The Linux battery CPU stayed cool. Reported HWP request, RAPL package limit, turbo setting, and selected profile matched AC. `thermald` was inactive. `MSR 0x64f` external-PROCHOT status was clear in before/after snapshots, not sampled continuously under load. See [current evidence](current-evidence.md) for run details.
+
+## What other cases actually did, and their outcomes
+
+| Case | Proposed action or discovered fix | Reported outcome | Fit to the G911 |
+| --- | --- | --- | --- |
+| [Dell Latitude 5420, issue #293](https://github.com/intel/thermal_daemon/issues/293) | Intel and reporters investigated OEM thermal-policy support; `thermald` and firmware/kernel changes helped some configurations. | Issue was closed, but [follow-up #334](https://github.com/intel/thermal_daemon/issues/334) explicitly says the 5420 problem was not properly fixed, and later reports continued. **Not a universal confirmed resolution.** | Same cool, low-clock Linux symptom and Windows comparison; different platform. |
+| [Dell Latitude 5421 and 5x20/7x20, issue #334](https://github.com/intel/thermal_daemon/issues/334) | `thermald` 2.4.9 contained a change for the 5421. Models were split into separate issues because behavior differed. | A 5421 owner confirmed the update fixed their machine. The combined issue was closed to track models separately, not because all were fixed. | Demonstrates a model-specific Linux policy fix; the G911 currently has no active `thermald`. |
+| [Dell Latitude 7320/7420, issue #341](https://github.com/intel/thermal_daemon/issues/341) | Kernel ACPI `_OSC` OS-policy capability handshake change, released in Linux 5.18-rc1, alongside updated `thermald`. | Multiple users reported improved sustained clocks; the original reporter later said the system ran properly with current kernel and `thermald`. A 7520 user said the same patch did not fix their machine. **Confirmed for tested 7320/7420 systems, not all Dell models.** | Strong proof that an OS-to-firmware policy handshake can matter; no evidence yet that this particular old patch is missing on NixOS 6.18. |
+| [HP Victus platform driver](https://code.googlesource.com/linux/torvalds/linux/%2B/f24ba334afafc70c3149e9db9c0cf8ecc6d52a09/drivers/platform/x86/hp/hp-wmi.c) | Kernel code reapplies CPU power limits when AC/battery state changes even if `performance` remains selected. | An implemented driver behavior, not a user bug report with a before/after outcome. | Shows why a valid profile readback alone cannot rule out source-specific firmware action. It does not imply the Casper driver needs the same call. |
+| [Acer Swift Go 14, issue #606](https://github.com/intel/thermal_daemon/issues/606) | Investigating a 7 W MSR PL1 clamp; maintainer requested `thermald` debug logs. The reporter corrected an earlier claim: the clamp can occur without `thermald`, while persistence depended on boot and `thermald` state in their runs. | **Open and unresolved.** The report is explicitly AI-assisted and its interpretation unverified. | Battery/source-state mechanism is relevant, but G911's sampled PL1 stayed at 110 W and `thermald` was inactive. |
+| [Lenovo T14 Gen 4, issue #605](https://github.com/intel/thermal_daemon/issues/605) | Reporter proposed making `thermald` wait for `thinkpad_acpi` or recheck platform support. Disabling `thermald` was their workaround. | **Open; no merged fix reported.** | Similar ~400 MHz, ~6 W, cool symptom; identified `thermald` path does not fit this G911. |
+| [ASUS Zenbook S14 external PROCHOT](https://github.com/omacom/omarchy/issues/6063) | Reporter identified a latched embedded-controller PROCHOT and performed a full power-drain EC reset. | **Reporter confirmed resolution:** loaded cores returned to ~4 GHz and PROCHOT cleared. | An example of a limit below ordinary power-profile controls. G911's external-PROCHOT bit was clear in snapshots, so this fix is not indicated by present evidence. |
+| [Framework Laptop 13 external PROCHOT](https://github.com/FrameworkComputer/SoftwareFirmwareIssueTracker/issues/266) | Removing a second misdetected USB-C charger cleared the reported latch; firmware v3.04 was promised. | **Temporary recovery confirmed; permanent firmware fix not yet confirmed** as of this review. Issue open. | Different trigger and hardware; useful diagnostic analogy only. |
+| [CachyOS kernel regression report](https://github.com/CachyOS/linux-cachyos/issues/967) | Reporter compared kernels; 7.1.6 showed ~400 MHz, LTS 6.18 worked, and 7.2.0-1 later worked. | **No longer reproducible on 7.2.0-1;** issue closed without a specifically identified fixing commit. | Kernel version can matter, but this report affected both power sources and is weaker evidence for a battery-only G911 fault. |
+| [Intel DTT Windows failure](https://community.intel.com/t5/Mobile-and-Desktop-Processors/CPU-locked-at-0-4-GHz-after-Intel-DTT-driver-update-2-3-20200/td-p/1753934) | Reporter removed the problematic DTT/IPF package and reverted to an older version. | **Workaround confirmed by reporter; no vendor fix confirmed.** Intel closed the support thread after no further response, not after verifying a replacement driver. | Shows DTT can create cross-OS differences in either direction. Running Windows DTT/IPF services do not prove what policy they applied here. |
+
+## How these cases change the G911 diagnosis
+
+[Intel's DTT overview](https://www.intel.com/content/www/us/en/support/articles/000102775.html) describes OEM and battery-aware policy on Windows; [Linux DPTF documentation](https://docs.kernel.org/driver-api/thermal/intel_dptf.html) describes the ACPI/PCI policy interfaces exposed to Linux. Those mechanisms make an OS-policy difference plausible, but no reliable measured report of this exact G911 Windows-versus-NixOS symptom was found.
+
+1. **Most plausible class:** a battery-dependent firmware, embedded-controller, electrical, or other limit that has not been sampled *while active*. The measurements do not identify which one.
+2. **Possible source of the OS gap:** different policy initialization or handling between Windows and Linux. Dell and HP show that this happens on other machines, but they do not prove the G911 mechanism.
+3. **Lower-priority possibilities:** a specific kernel/platform-driver regression, or a stateful power-source transition. Neither has a same-machine A/B test yet.
+
+Missing Casper WMI support is not a viable explanation: the driver is installed and reads the G911 firmware profile. A `thermald`-caused clamp is a poor fit because it was inactive. CPU-only workload results make a browser or GPU-only explanation inadequate. The [Linux `intel_pstate` documentation](https://docs.kernel.org/admin-guide/pm/intel_pstate.html) also makes clear that HWP `powersave` is not simply a command to stay at minimum clock.
+
+The most discriminating next step is **read-only, live Linux telemetry during the pinned load** on battery and AC: CPU busy frequency and package power alongside current thermal/electrical-limit status, `MSR 0x64f` limit reasons, and MSR/MMIO power limits. Before/after snapshots can miss transient enforcement. No other machine's workaround should be applied to the G911 until its active limiting reason is identified.

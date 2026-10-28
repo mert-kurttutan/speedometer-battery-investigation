@@ -32,6 +32,18 @@ nix develop -c nu scripts/capture-linux.nu battery
 
 The Linux script samples for 240 seconds by default. Start Speedometer as soon as it says to. Set a different duration as the third argument. Logs default to `/tmp/speedometer-power-captures/`; copy captures you want to preserve into `captures/raw/` before committing.
 
+### NixOS CPU-only limit capture
+
+For the next diagnostic, run the same 30-second pinned CPU load on battery and AC:
+
+```sh
+git pull
+nix develop -c nu scripts/capture-cpu-load.nu battery 0 30
+nix develop -c nu scripts/capture-cpu-load.nu ac 0 30
+```
+
+The script verifies the power source, records the selected profile, and runs `stress-ng` on logical CPU 0 while `turbostat` samples CPU activity. It now also samples the HWP request, core performance-limit reasons, core and package thermal status, and package RAPL limit throughout the load. The MSR reads are diagnostic only. `sudo` prompts before the load; if `/dev/cpu/0/msr` is absent, load the `msr` module as described below. Logs are saved under `/tmp/speedometer-power-captures/` and should be reviewed before publication.
+
 ### Windows setup and capture
 
 1. Open PowerShell. If Git is not installed, install Git for Windows:

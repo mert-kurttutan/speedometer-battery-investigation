@@ -27,6 +27,27 @@ def append-text [file: string, value: string] {
   $value | save --append $file
 }
 
+def read-msr [rdmsr: string, cpu: int, register: string] {
+  let result = (^sudo -n $rdmsr -p $cpu $register | complete)
+  if $result.exit_code == 0 {
+    $result.stdout | str trim
+  } else {
+    $"error: (($result.stderr | str trim))"
+  }
+}
+
+def live-limit-samples [cpu: int, rdmsr: string] {
+  mut rows = []
+  loop {
+    if (try { job recv --timeout 0sec } catch { null }) == 'stop' { break }
+    let timestamp = (date now | format date '%Y-%m-%dT%H:%M:%S%:z')
+    let row = $"($timestamp),source=(detect-power-source),profile=(read-value '/sys/firmware/acpi/platform_profile'),hwp_0x774=(read-msr $rdmsr $cpu '0x774'),core_limit_0x64f=(read-msr $rdmsr $cpu '0x64f'),core_thermal_0x19c=(read-msr $rdmsr $cpu '0x19c'),package_thermal_0x1b1=(read-msr $rdmsr 0 '0x1b1'),package_power_limit_0x610=(read-msr $rdmsr 0 '0x610')"
+    $rows = ($rows | append $row)
+    sleep 1sec
+  }
+  $rows | str join "\n" | job send 0
+}
+
 def snapshot [file: string, label: string, cpu: int, rdmsr: string] {
   let hwp = (^sudo $rdmsr -p $cpu 0x774 | complete)
   let limit = (^sudo $rdmsr -p $cpu 0x64f | complete)
@@ -58,6 +79,9 @@ def main [expected_source: string, cpu: int = 0, duration: int = 30] {
   if $cpu < 0 or $cpu >= $cpu_count {
     error make {msg: $"CPU id ($cpu) is outside the available range 0..($cpu_count - 1)."}
   }
+  if $duration < 1 {
+    error make {msg: 'Duration must be at least 1 second.'}
+  }
   for tool in ['turbostat', 'stress-ng', 'taskset', 'rdmsr'] {
     if (which $tool | is-empty) {
       error make {msg: $"($tool) missing. Run this script inside `nix develop`."}
@@ -75,8 +99,13 @@ def main [expected_source: string, cpu: int = 0, duration: int = 30] {
   $"Test: single logical CPU load\nPower source: ($expected_source)\nCPU: ($cpu)\nDuration: ($duration) seconds\n" | save $log
   snapshot $log 'before' $cpu $rdmsr
   print $"Writing to ($log). Starting a ($duration)-second CPU-only load on CPU ($cpu)."
-  append-text $log "\n===== turbostat and stress-ng =====\n"
+  let sampler = (job spawn { live-limit-samples $cpu $rdmsr })
   let run = (^sudo $turbo --interval 1 --cpu $cpu -- $taskset -c $cpu $stress --cpu 1 --cpu-method matrixprod --timeout $"($duration)s" --metrics-brief | complete)
+  'stop' | job send $sampler
+  let samples = (try { job recv --timeout 10sec } catch {|err| $"Sampler error: ($err.msg)" })
+  append-text $log "\n===== live limit samples (approximately 1-second spacing) =====\n"
+  append-text $log $samples
+  append-text $log "\n===== turbostat and stress-ng =====\n"
   append-text $log $run.stdout
   if ($run.stderr | str trim) != '' { append-text $log $run.stderr }
   snapshot $log 'after' $cpu $rdmsr
